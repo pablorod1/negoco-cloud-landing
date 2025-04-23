@@ -5,11 +5,10 @@ import { motion } from "framer-motion";
 const BigRow1 = () => {
   return (
     <motion.div
-      initial={{ scale: 0.8, opacity: 0 }}
+      initial={{ scale: 0.95, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
-      exit={{ scale: 0.8, opacity: 0 }}
-      transition={{ duration: 0.6, type: "spring", bounce: 0.5 }}
-      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.5, delay: 1.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       className="min-h-[420px] lg:col-span-2 lg:col-start-2 flex flex-col gap-4 bg-gradient-to-br from-white via-white to-gray-200 rounded-3xl  p-6 relative overflow-hidden h-full shadow-md border border-gray-100"
     >
       <div className="flex flex-col gap-2 flex-1">

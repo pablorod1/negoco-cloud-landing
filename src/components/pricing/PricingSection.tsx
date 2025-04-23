@@ -3,6 +3,7 @@ import PricingCard from "./PricingCard";
 import { Paintbrush2, User } from "lucide-react";
 import { Button } from "../ui/button";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 export default function PricingSection() {
   const [plan, setPlan] = useState<"monthly" | "yearly">("monthly");
@@ -29,20 +30,36 @@ export default function PricingSection() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-4">
-        <div className="flex items-center justify-center gap-4">
-          <Button
+      <div className="flex flex-col items-center gap-4">
+        {/* Enhanced Plan Switcher */}
+        <div className="flex flex-row items-center relative p-0.5 bg-white rounded-[9px] shadow w-full">
+          <button
             onClick={() => setPlan("monthly")}
-            variant={plan === "monthly" ? "default" : "outline"}
+            className={cn(
+              "w-1/2 h-[28px] relative z-[99] bg-transparent border-0 outline-none flex justify-center items-center grow cursor-pointer font-medium text-sm",
+              plan === "monthly" ? "text-white" : "text-primary-500",
+              "transition-colors duration-200 ease-in-out"
+            )}
           >
             Mensual
-          </Button>
-          <Button
-            variant={plan === "yearly" ? "default" : "outline"}
+          </button>
+          <button
             onClick={() => setPlan("yearly")}
+            className={cn(
+              "w-1/2 h-[28px] relative z-[99] bg-transparent border-0 outline-none flex justify-center items-center grow cursor-pointer font-medium text-sm",
+              plan === "yearly" ? "text-white" : "text-primary-500",
+              "transition-colors duration-200 ease-in-out"
+            )}
           >
             Anual
-          </Button>
+          </button>
+          <div
+            className={cn(
+              "w-1/2 h-[28px] bg-primary-700 absolute top-[2px] left-[2px] z-[9] border border-[rgba(0,0,0,0.04)] shadow-[0px_3px_8px_rgba(0,0,0,0.12),_0px_3px_1px_rgba(0,0,0,0.04)] rounded-[7px] transition-all duration-200 ease-out",
+              plan === "monthly" ? "left-[2px]" : "left-[calc(50%_-_2px)]",
+              "transition-all duration-200 ease-in-out"
+            )}
+          ></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
           <PricingCard

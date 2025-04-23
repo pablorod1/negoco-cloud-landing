@@ -7,11 +7,10 @@ import { motion } from "framer-motion";
 const BigCol1 = () => {
   return (
     <motion.div
-      initial={{ scale: 0.8, opacity: 0 }}
+      initial={{ scale: 0.95, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
-      exit={{ scale: 0.8, opacity: 0 }}
-      transition={{ duration: 1, type: "spring", bounce: 0.5 }}
-      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.5, delay: 0.6 }}
+      viewport={{ once: true, amount: 0.2 }}
       className="min-h-[420px] lg:col-span-2 bg-gradient-to-b from-white via-white to-primary-200 flex flex-col gap-4 rounded-3xl relative overflow-hidden h-full shadow-md p-6 border border-gray-100"
     >
       <div className="flex flex-col gap-2 flex-1">
@@ -38,11 +37,10 @@ const BigCol1 = () => {
 const BigCol2 = () => {
   return (
     <motion.div
-      initial={{ scale: 0.8, opacity: 0 }}
+      initial={{ scale: 0.95, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
-      exit={{ scale: 0.8, opacity: 0 }}
-      transition={{ duration: 1, type: "spring", bounce: 0.5 }}
-      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.5, delay: 0.8 }}
+      viewport={{ once: true, amount: 0.2 }}
       className="min-h-[420px] lg:col-start-3 shadow-md rounded-3xl relative overflow-hidden h-full group"
     >
       {/* Capa de imagen con overlay mejorado */}
@@ -91,11 +89,10 @@ const BigCol2 = () => {
 const BigCol3 = () => {
   return (
     <motion.div
-      initial={{ scale: 0.8, opacity: 0 }}
+      initial={{ scale: 0.95, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
-      exit={{ scale: 0.8, opacity: 0 }}
-      transition={{ duration: 1, type: "spring", bounce: 0.5 }}
-      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.5, delay: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
       className="min-h-[420px] relative bg-white shadow-lg rounded-3xl  p-6 flex flex-col justify-between h-full overflow-hidden"
     >
       {/* Fondo decorativo dinámico */}

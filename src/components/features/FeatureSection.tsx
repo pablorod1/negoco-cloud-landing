@@ -9,16 +9,6 @@ interface Props {
   reverse?: boolean;
 }
 
-const floatingAnimation = (index: number) => ({
-  x: [`${index * 5}px`, `${index * 5 + 20}px`, `${index * 5}px`],
-  transition: {
-    duration: 3,
-    ease: "easeInOut",
-    repeat: Infinity,
-    delay: index * 0.2,
-  },
-});
-
 export default function FeatureSection({
   title,
   description,
@@ -34,10 +24,8 @@ export default function FeatureSection({
       transition={{ duration: 1 }}
       viewport={{ once: true, amount: 0.6 }}
       className={cn(
-        "w-full max-w-[1600px] mx-auto px-12 lg:px-6 py-16 rounded-xl",
-        !reverse
-          ? "bg-gradient-to-l from-primary-50 to-white"
-          : "bg-gradient-to-r from-primary-50 to-white"
+        "w-full max-w-[1600px] mx-auto px-12 lg:px-6 py-16 rounded-xl ",
+        "bg-gradient-to-br from-gray-50 to-white"
       )}
     >
       <div
@@ -98,13 +86,26 @@ export default function FeatureSection({
             ))}
           </div>
         ) : (
-          <div className="flex items-center justify-center w-full aspect-[1920/556]">
+          <motion.div
+            initial={{ scale: 0.7, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            transition={{
+              duration: 0.6,
+              bounce: 0.6,
+              type: "spring",
+              delay: 0.2,
+            }}
+            viewport={{ once: true, amount: 0.8 }}
+            key={0}
+            className="w-full aspect-[1920/556]"
+          >
             <img
               src={images[0]}
               alt={title}
               className="w-full h-auto object-cover rounded-lg shadow-lg"
             />
-          </div>
+          </motion.div>
         )}
       </div>
     </motion.section>

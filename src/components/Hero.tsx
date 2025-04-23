@@ -11,9 +11,14 @@ export default function HeroSection() {
           {/* Notification banner with animation */}
           <motion.div
             className="inline-flex items-center rounded-full bg-primary-50 px-4 py-1.5 text-sm font-medium text-primary-800 shadow-xl ring-1 ring-primary-300"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 3.4 }}
+            initial={{ opacity: 0, scale: 0.8, y: -20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              delay: 4.4,
+              type: "spring",
+              bounce: 0.4,
+            }}
           >
             <span className="animate-pulse text-sm font-semibold tracking-wide drop-shadow-[0_0_6px_rgba(99,102,241,0.2)]">
               ¡Negoco Cloud ya está aquí! 🚀
@@ -24,9 +29,9 @@ export default function HeroSection() {
           <div className="space-y-6">
             <motion.h1
               className="text-primary-950 text-xl font-bold sm:text-2xl md:text-3xl lg:text-6xl tracking-tight font-eras leading-tight text-shadow-md text-pretty"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 3.6 }}
+              transition={{ duration: 0.8, delay: 4.6, ease: "easeOut" }}
             >
               Digitaliza y optimiza la gestión de tu{" "}
               <span className="italic text-primary-700 font-clash-regular font-light">
@@ -42,7 +47,7 @@ export default function HeroSection() {
               className="text-lg text-primary-900/80 text-pretty max-w-4xl w-full mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 3.8 }}
+              transition={{ duration: 0.6, delay: 4.8, ease: "easeOut" }}
             >
               Transforma la gestión de tus clientes y operaciones con el CRM más
               avanzado para consultorías energéticas y empresas, optimizando la
@@ -55,7 +60,7 @@ export default function HeroSection() {
             className="flex flex-col gap-4 sm:flex-row"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 3.8 }}
+            transition={{ duration: 0.6, delay: 5.0, ease: "easeOut" }}
           >
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
               <Button className="inline-flex w-full h-12 items-center justify-center gap-2 rounded-md bg-primary-950 px-8 text-base font-medium text-white transition-colors hover:bg-[#1e293b]">

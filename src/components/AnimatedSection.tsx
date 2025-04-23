@@ -10,7 +10,7 @@ export default function AnimatedSection() {
       exit={{ y: -100 }}
       transition={{ duration: 1.3 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="flex flex-col gap-y-44 w-full rounded-xl mask-t-from-95% mask-b-from-95% bg-white/90 px-12 xl:px-6 py-32"
+      className="flex flex-col gap-y-44 w-full rounded-xl mask-t-from-95% mask-b-from-95% bg-white/90 px-12 xl:px-6 py-32 z-50"
     >
       <BentoGrid />
 
