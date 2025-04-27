@@ -7,24 +7,11 @@ export default function AnimatedNav() {
         <motion.li
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 3.6, duration: 0.4 }}
-        >
-          <a href="/">Inicio</a>
-        </motion.li>
-        <motion.li
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 3.8, duration: 0.4 }}
         >
           <a href="/contacto">Contacto</a>
         </motion.li>
-        <motion.li
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 4.0, duration: 0.4 }}
-        >
-          <a href="/servicios">Servicios</a>
-        </motion.li>
+
         <motion.li
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}

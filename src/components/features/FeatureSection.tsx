@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
-interface Props {
+interface FeatureProps {
   title: string;
   description: string;
   images: string[];
@@ -9,22 +9,76 @@ interface Props {
   reverse?: boolean;
 }
 
-export default function FeatureSection({
+const features: FeatureProps[] = [
+  {
+    title: "Analítica comercial en tiempo real con dashboards interactivos",
+    description:
+      "Supervisa KPIs como ventas, comisiones y evolución de trámites mensuales desde un dashboard visual e intuitivo. Toma decisiones estratégicas basadas en datos actualizados al instante con gráficos interactivos que impulsan el rendimiento comercial.",
+    badge: "Control total y visión estratégica",
+    images: ["/images/yearlyChart.webp", "/images/personalChart.webp"],
+  },
+  {
+    title: "Convierte comparativas en contratos con un clic",
+    description:
+      "Automatiza la gestión comercial transformando comparativas de tarifas en contratos finales de forma instantánea. Optimiza tus tasas de conversión, reduce errores operativos y acelera el cierre de ventas con tecnología inteligente.",
+    badge: "Cierra ventas más rápido",
+    images: [
+      "/images/comparativa_details.webp",
+      "/images/comparativaConversion.webp",
+    ],
+    reverse: true,
+  },
+  {
+    title: "Actualización masiva del estado de trámites",
+    description:
+      "Gestiona múltiples trámites de forma simultánea desde un único panel. Mejora la eficiencia operativa y el seguimiento comercial manteniendo al equipo alineado con el estado de cada operación en tiempo real.",
+    badge: "Agilidad operativa asegurada",
+    images: ["/images/liquidez.webp", "/images/updateStatus.webp"],
+  },
+  {
+    title: "Gestión documental centralizada para equipos comerciales",
+    description:
+      "Organiza, comparte y controla la documentación de forma eficiente. Los gerentes pueden subir archivos clave por compañía para facilitar el acceso rápido y seguro del equipo comercial desde cualquier lugar.",
+    badge: "Documentación accesible y organizada",
+    images: ["/images/docs.webp"],
+    reverse: true,
+  },
+  {
+    title: "Control de usuarios y gestión de colaboradores",
+    description:
+      "Invita a colaboradores externos o internos, asigna roles y controla los permisos de acceso. Protege tu información y mejora la colaboración con una plataforma segura y escalable adaptada a equipos dinámicos.",
+    badge: "Colaboración segura y controlada",
+    images: ["/images/colaboradores.avif"],
+  },
+];
+
+export const FeaturesSection = () => {
+  return (
+    <section
+      aria-labelledby="features-heading"
+      className="w-full flex flex-col items-center gap-24"
+    >
+      <h2 id="features-heading" className="sr-only">
+        Funcionalidades destacadas de Negoco Cloud
+      </h2>
+      {features.map((feature, index) => (
+        <Feature {...feature} key={index} />
+      ))}
+    </section>
+  );
+};
+
+const Feature = ({
   title,
   description,
   images,
   reverse,
   badge,
-}: Props) {
+}: FeatureProps) => {
   return (
-    <motion.section
-      initial={{ opacity: 0, x: reverse ? -80 : 80 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: reverse ? -80 : 80 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true, amount: 0.6 }}
+    <article
       className={cn(
-        "w-full max-w-[1600px] mx-auto px-12 lg:px-6 py-16 rounded-xl ",
+        "w-full max-w-[1600px] mx-auto px-12 lg:px-6 py-16 rounded-xl",
         "bg-gradient-to-br from-gray-50 to-white"
       )}
     >
@@ -34,19 +88,26 @@ export default function FeatureSection({
           reverse ? "lg:flex-row-reverse" : "lg:flex-row"
         )}
       >
-        <div className="flex flex-col gap-6 text-center lg:text-left">
+        <motion.div
+          initial={{ opacity: 0, x: reverse ? -80 : 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: reverse ? -80 : 80 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: false, amount: 0.8 }}
+          className="flex flex-col gap-6 text-center lg:text-left"
+        >
           {badge && (
             <span className="text-sm text-primary-700 font-medium tracking-widest uppercase">
               {badge}
             </span>
           )}
           <div className="flex flex-col gap-4">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-primary-950 text-pretty">
+            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-primary-950 text-pretty">
               {title}
-            </h2>
+            </h3>
             <p className="text-gray-500">{description}</p>
           </div>
-        </div>
+        </motion.div>
         {images.length > 1 ? (
           <div className="relative min-h-[400px] h-full w-full max-w-4xl flex justify-end">
             {images.map((image, index) => (
@@ -60,10 +121,10 @@ export default function FeatureSection({
                   type: "spring",
                   delay: index * 0.2,
                 }}
-                viewport={{ once: true, amount: 0.8 }}
+                viewport={{ once: true, amount: 0.7 }}
                 key={index}
                 className={cn(
-                  " w-full h-full aspect-[901/542] max-w-lg p-0 rounded-lg",
+                  "w-full h-full aspect-[901/542] max-w-lg p-0 rounded-lg",
                   "absolute",
                   index === 0
                     ? !reverse
@@ -108,6 +169,6 @@ export default function FeatureSection({
           </motion.div>
         )}
       </div>
-    </motion.section>
+    </article>
   );
-}
+};

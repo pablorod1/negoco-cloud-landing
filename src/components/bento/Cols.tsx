@@ -1,8 +1,8 @@
-import { HelpCircle, TrendingUp } from "lucide-react";
+import { HelpCircle } from "lucide-react";
 
 import { ShinyButton } from "../magicui/shiny-button";
-import { Button } from "../ui/button";
 import { motion } from "framer-motion";
+import { PerformanceChart } from "./PerformanceChart";
 
 const BigCol1 = () => {
   return (
@@ -11,19 +11,18 @@ const BigCol1 = () => {
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.6 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="min-h-[420px] lg:col-span-2 bg-gradient-to-b from-white via-white to-primary-200 flex flex-col gap-4 rounded-3xl relative overflow-hidden h-full shadow-md p-6 border border-gray-100"
+      className="min-h-[420px] lg:col-span-2 bg-gradient-to-b from-white via-white to-primary-200 flex flex-col gap-4 rounded-3xl relative overflow-hidden h-full shadow-center p-6"
     >
-      <div className="flex flex-col gap-2 flex-1">
-        <h3 className="text-xl font-bold text-primary-900">
-          Analíticas en tiempo real
+      <div className="flex flex-col gap-2 items-center text-center xl:items-start xl:text-left">
+        <h3 className="text-base md:text-lg xl:text-xl font-bold text-primary-900">
+          El CRM para consultorías energéticas
         </h3>
         <p className="text-gray-700 text-xs">
-          Con <strong>Negoco</strong>, obtén informes detallados y
-          visualizaciones de datos que te ayudarán a tomar decisiones informadas
-          y estratégicas.
+          Supervisa clientes, ventas y equipos desde un panel de control
+          unificado. Mejora la productividad con Negoco Cloud.
         </p>
       </div>
-      <div className="absolute -bottom-8 left-8  aspect-[1363/548] w-full h-full max-h-80 rounded-4xl overflow-hidden bg-white shadow">
+      <div className="absolute -bottom-8 xl:-bottom-12 left-8 aspect-[1363/548] w-full h-full max-h-[260px] xl:max-h-[360px] rounded-4xl overflow-hidden bg-white shadow">
         <img
           src="/images/analytics2.png"
           alt="Imagen de los filtros del CRM"
@@ -41,7 +40,7 @@ const BigCol2 = () => {
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.8 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="min-h-[420px] lg:col-start-3 shadow-md rounded-3xl relative overflow-hidden h-full group"
+      className="min-h-[420px] lg:col-start-3 shadow-center rounded-3xl relative overflow-hidden h-full group"
     >
       {/* Capa de imagen con overlay mejorado */}
       <div className="absolute inset-0 z-0 overflow-hidden w-full h-full">
@@ -93,38 +92,24 @@ const BigCol3 = () => {
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5, delay: 1 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="min-h-[420px] relative bg-white shadow-lg rounded-3xl  p-6 flex flex-col justify-between h-full overflow-hidden"
+      className="min-h-[420px] shadow-center rounded-3xl relative overflow-hidden h-full group p-6 bg-gradient-to-br from-primary-200 to-primary-300 brightness-120"
     >
-      {/* Fondo decorativo dinámico */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-white opacity-70 z-0 pointer-events-none" />
-      <div className="absolute -top-8 -right-8 w-32 h-32 bg-primary-100 rounded-full blur-2xl opacity-40 z-0" />
-
-      {/* Contenido principal */}
-      <div className="relative z-10 flex flex-col items-start justify-between gap-4 h-full">
-        <div className="flex flex-col items-start gap-2">
-          <h3 className="text-xl font-bold text-primary-900 text-balance">
-            Prioridad a la conversión
+      {/* Main content */}
+      <div className="relative z-10 flex flex-col items-center justify-start gap-6 h-full">
+        <div className="flex flex-col items-start gap-2 text-left">
+          <h3 className="text-xl font-bold text-primary-900">
+            Alto rendimiento comercial
           </h3>
-          <p className="text-xs text-gray-700 leading-relaxed">
-            En <strong>Negoco</strong>, optimizamos cada flujo de trabajo para
-            cerrar más ventas rápidamente.
+          <p className="text-sm text-gray-600 leading-relaxed max-w-prose">
+            Mejora tus conversiones y el ROI con un CRM optimizado para empresas
+            energéticas.
           </p>
         </div>
 
-        <div className="aspect-[500/500] w-full h-full max-w-44 ms-auto">
-          <img
-            src="/images/conversion.webp"
-            alt=""
-            className="w-full h-auto object-cover"
-            loading="lazy"
-          />
-        </div>
-
-        <div className="w-full mt-auto">
-          <Button className="w-full inline-flex items-center justify-center gap-2 bg-primary-600 hover:bg-primary-700 text-white text-sm py-2.5 rounded-md">
-            <TrendingUp className="w-4 h-4" />
-            Impulsa tus ratios de conversión
-          </Button>
+        <div className="w-full h-full flex items-center justify-center gap-6">
+          <PerformanceChart value={97} opacity="opacity-20" />
+          <PerformanceChart value={98} />
+          <PerformanceChart value={99} opacity="opacity-20" />
         </div>
       </div>
     </motion.div>

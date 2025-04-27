@@ -24,8 +24,8 @@ import WhatsappButton from "@/components/WhatsappButton";
   <body>
     <Background client:load />
     <Header />
-    <WhatsappButton client:load />
     <slot />
+    <WhatsappButton client:load />
   </body>
 </html>
 
@@ -35,8 +35,8 @@ import WhatsappButton from "@/components/WhatsappButton";
     margin: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
+    position: relative;
   }
 </style>

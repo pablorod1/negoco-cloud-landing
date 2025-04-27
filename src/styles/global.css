@@ -199,6 +199,8 @@
 
   --animate-shine: shine var(--duration) infinite linear;
 
+  --shadow-center: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+
   @keyframes shine {
   0% {
     background-position: 0% 0%;

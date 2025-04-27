@@ -4,14 +4,12 @@ import Hero from "@/components/Hero";
 import "../styles/global.css";
 import ScrollBlocker from "@/components/ScrollBlocker";
 import AnimatedSection from "@/components/AnimatedSection";
-import AnimatedFunnel from "@/components/AnimatedFunnel";
 import PricingSection from "@/components/pricing/PricingSection";
 ---
 
 <Layout>
   <ScrollBlocker client:load />
   <Hero client:load />
-  <!-- <AnimatedFunnel client:visible /> -->
-  <AnimatedSection client:visible />
-  <PricingSection client:visible />
+  <AnimatedSection client:load />
+  <PricingSection client:only="react" />
 </Layout>

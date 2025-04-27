@@ -1,6 +1,8 @@
 import { Play } from "lucide-react";
 import { RainbowButton } from "../magicui/rainbow-button";
 import { motion } from "framer-motion";
+import { Button } from "../ui/button";
+import { PerformanceChart } from "./PerformanceChart";
 
 const BigRow1 = () => {
   return (
@@ -9,7 +11,7 @@ const BigRow1 = () => {
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5, delay: 1.2 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="min-h-[420px] lg:col-span-2 lg:col-start-2 flex flex-col gap-4 bg-gradient-to-br from-white via-white to-gray-200 rounded-3xl  p-6 relative overflow-hidden h-full shadow-md border border-gray-100"
+      className="min-h-[420px] lg:col-span-2 lg:col-start-2 flex flex-col gap-4 bg-gradient-to-br from-white via-white to-gray-200 rounded-3xl  p-6 relative overflow-hidden h-full shadow-center"
     >
       <div className="flex flex-col gap-2 flex-1">
         <h3 className="text-xl font-bold text-primary-900">
@@ -43,30 +45,33 @@ export default BigRow1;
 
 const BigRow2 = () => {
   return (
-    <div className="flex flex-col justify-between items-center relative h-full w-full bg-gradient-to-b from-primary-500 via-primary-50 to-white shadow-lg md:rounded-tr-3xl rounded-sm p-6  overflow-hidden">
-      <div className="flex flex-col items-center text-center  mb-6 ">
-        <h3 className="text-lg font-semibold text-white text-pretty">
-          Un CRM diseñado para consultorías que buscan eficiencia
-        </h3>
-      </div>
-      <div
-        className="aspect-[1911/966] max-w-[600px] mx-auto w-full h-auto overflow-hidden rounded-lg shadow-lg "
-        style={{
-          maskImage: "linear-gradient(to bottom, black 60%, transparent)",
-        }}
-      >
-        <img
-          src="/images/dashboard.webp"
-          alt="Dashboard Screenshot"
-          className="w-auto h-auto object-cover"
-        />
+    <motion.div
+      initial={{ scale: 0.95, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.5, delay: 1.2 }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="min-h-[420px] flex flex-col justify-between items-center relative h-full w-full bg-white shadow-center rounded-3xl p-6 overflow-hidden"
+    >
+      <h3 className="text-xl font-bold text-primary-900 mb-2">
+        Descubre cómo tu consultoría puede rendir al máximo
+      </h3>
+
+      <div className="w-full h-full flex justify-center items-center gap-5">
+        <PerformanceChart value={97} opacity="opacity-30" />
+        <PerformanceChart value={98} />
+        <PerformanceChart value={99} opacity="opacity-30" />
       </div>
 
-      <RainbowButton className="text-white gap-2 text-sm mt-6 rounded-md">
-        <Play className="size-4" strokeWidth={3} />
-        <span>Solicita tu demo gratuita</span>
-      </RainbowButton>
-    </div>
+      <div className="flex flex-col items-center gap-4">
+        <Button variant="outline" className="text-primary-950 ">
+          <Play className="size-4" strokeWidth={3} />
+          <span>Solicita tu demo gratuita</span>
+        </Button>
+        <p className="text-gray-600 text-xs text-center ">
+          * Sin tarjeta de crédito. 30 días de prueba.
+        </p>
+      </div>
+    </motion.div>
   );
 };
 

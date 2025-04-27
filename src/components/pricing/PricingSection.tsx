@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import PricingCard from "./PricingCard";
-import { Paintbrush2, User } from "lucide-react";
+import { BadgeCheck, Crown, Paintbrush2, User } from "lucide-react";
 import { Button } from "../ui/button";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -12,9 +12,9 @@ export default function PricingSection() {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="flex flex-col items-center xl:flex-row xl:items-start justify-between gap-4 xl:gap-12 w-full xl:max-w-[1600px] mx-auto px-12 xl:px-6 py-16 pb-28"
+      className="flex flex-col items-center justify-center gap-4 xl:gap-12 w-full xl:max-w-[1600px] mx-auto px-12 xl:px-6 py-16 pb-28"
     >
-      <div className="flex flex-col gap-6 text-center xl:text-left">
+      <div className="flex flex-col gap-6 text-center">
         <span className="text-sm text-primary-700 font-medium tracking-widest uppercase">
           Comienza a crecer con Negoco Cloud
         </span>
@@ -30,13 +30,13 @@ export default function PricingSection() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-12">
         {/* Enhanced Plan Switcher */}
-        <div className="flex flex-row items-center relative p-0.5 bg-white rounded-[9px] shadow w-full">
+        <div className="flex flex-row items-center relative p-0.5 bg-white rounded-[9px] shadow w-full max-w-3xs">
           <button
             onClick={() => setPlan("monthly")}
             className={cn(
-              "w-1/2 h-[28px] relative z-[99] bg-transparent border-0 outline-none flex justify-center items-center grow cursor-pointer font-medium text-sm",
+              "w-1/2 h-[28px] relative z-10 bg-transparent border-0 outline-none flex justify-center items-center grow cursor-pointer font-medium text-sm",
               plan === "monthly" ? "text-white" : "text-primary-500",
               "transition-colors duration-200 ease-in-out"
             )}
@@ -46,7 +46,7 @@ export default function PricingSection() {
           <button
             onClick={() => setPlan("yearly")}
             className={cn(
-              "w-1/2 h-[28px] relative z-[99] bg-transparent border-0 outline-none flex justify-center items-center grow cursor-pointer font-medium text-sm",
+              "w-1/2 h-[28px] relative z-10 bg-transparent border-0 outline-none flex justify-center items-center grow cursor-pointer font-medium text-sm",
               plan === "yearly" ? "text-white" : "text-primary-500",
               "transition-colors duration-200 ease-in-out"
             )}
@@ -61,32 +61,53 @@ export default function PricingSection() {
             )}
           ></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
           <PricingCard
             icon={<User size={16} />}
-            main
-            title="Estándar"
-            price={{ monthly: "24,95", yearly: "19,99" }}
+            title="Starter"
+            price={{ monthly: "95", yearly: "87,08" }}
             plan={plan}
             features={[
-              "Gestión de clientes",
-              "Automatización de tareas",
-              "Informes y análisis",
-              "Integraciones básicas",
-              "Soporte por correo electrónico",
+              "Acceso a trámites y liquidaciones",
+              "Acceso a documentación",
+              "Acceso a colaboradores",
+              "Notificaciones por correo electrónico",
+              "Soporte por Mail",
+              "2 usuarios incluidos",
             ]}
+            planDiscount="8,33"
+            pricePerUser={"10"}
           />
           <PricingCard
             title="Pro"
-            icon={<Paintbrush2 size={16} />}
-            price={{ monthly: "40", yearly: "400" }}
+            icon={<BadgeCheck size={16} />}
+            price={{ monthly: "195", yearly: "170,62" }}
             plan={plan}
             features={[
-              "Todo en Estándar",
-              "Personalización avanzada",
-              "Integraciones premium",
-              "Soporte prioritario",
+              "Todo en Starter",
+              "Acceso a comparativas",
+              "Integración para jefes de equipo",
+              "Soporte por Mail y Whatsapp",
+              "10 usuarios incluidos",
             ]}
+            main
+            planDiscount="12,5"
+            pricePerUser={"5"}
+          />
+          <PricingCard
+            title="Elite"
+            icon={<Crown size={16} />}
+            price={{ monthly: "295", yearly: "245,83" }}
+            plan={plan}
+            features={[
+              "Todo en Pro",
+              "Logo de la empresa",
+              "Colores coorporativos",
+              "Notificaciones por Mail personalizadas",
+              "Soporte prioritario por cualquier vía",
+              "USUARIOS ILIMITADOS",
+            ]}
+            planDiscount="17,67"
           />
         </div>
       </div>

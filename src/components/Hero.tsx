@@ -1,11 +1,11 @@
-import { Anchor, Headphones } from "lucide-react";
+import { Anchor, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import WhatsApp from "./icons/WhatsappIcon";
+import ContactModal from "./contact/ContactModal";
 
 export default function HeroSection() {
   return (
-    <section className="w-full overflow-hidden py-44 md:pt-48">
+    <section className="w-full overflow-hidden pb-24 py-44 md:pt-48">
       <div className="px-4 md:px-6 lg:px-12 max-w-[1200px] mx-auto flex flex-col items-center justify-center text-center">
         <div className="flex flex-col items-center space-y-8 text-center">
           {/* Notification banner with animation */}
@@ -15,7 +15,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{
               duration: 0.6,
-              delay: 4.4,
+              delay: 4.2,
               type: "spring",
               bounce: 0.4,
             }}
@@ -31,27 +31,25 @@ export default function HeroSection() {
               className="text-primary-950 text-xl font-bold sm:text-2xl md:text-3xl lg:text-6xl tracking-tight font-eras leading-tight text-shadow-md text-pretty"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 4.6, ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: 4.4, ease: "easeOut" }}
             >
-              Digitaliza y optimiza la gestión de tu{" "}
+              El CRM para empresas energéticas y{" "}
               <span className="italic text-primary-700 font-clash-regular font-light">
-                negocio
+                consultorías
               </span>{" "}
-              con el CRM de{" "}
-              <span className="italic text-primary-700 font-clash-regular font-light">
-                Negoco
-              </span>
+              modernas
             </motion.h1>
 
             <motion.p
-              className="text-lg text-primary-900/80 text-pretty max-w-4xl w-full mx-auto leading-relaxed"
+              className="text-sm md:text-base xl:text-lg text-primary-900/80  w-full mx-auto leading-relaxed text-pretty"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 4.8, ease: "easeOut" }}
+              transition={{ duration: 0.6, delay: 4.6, ease: "easeOut" }}
             >
-              Transforma la gestión de tus clientes y operaciones con el CRM más
-              avanzado para consultorías energéticas y empresas, optimizando la
-              productividad y reduciendo costes.
+              Digitaliza la gestión de clientes, automatiza procesos y mejora la
+              productividad con un CRM diseñado para el sector energético.
+              Negoco Cloud potencia tu operativa diaria y reduce costes desde el
+              primer día.
             </motion.p>
           </div>
 
@@ -60,23 +58,23 @@ export default function HeroSection() {
             className="flex flex-col gap-4 sm:flex-row"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 5.0, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 4.8, ease: "easeOut" }}
           >
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-              <Button className="inline-flex w-full h-12 items-center justify-center gap-2 rounded-md bg-primary-950 px-8 text-base font-medium text-white transition-colors hover:bg-[#1e293b]">
+              {/* <Button className="inline-flex w-full h-12 items-center justify-center gap-2 rounded-md bg-primary-950 px-8 text-base font-medium text-white transition-colors hover:bg-[#1e293b]">
                 <WhatsApp className="h-12 w-12" />
                 Contáctanos por Whatsapp
+              </Button> */}
+              <Button asChild variant="primary" size="lg">
+                <a href="mailto:info@negococloud.es">
+                  <Mail />
+                  Contáctanos por correo
+                </a>
               </Button>
             </motion.div>
 
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-              <Button
-                variant="outline"
-                className="inline-flex h-12 items-center justify-center gap-3 rounded-md border border-slate-200 bg-white px-6 text-base font-medium text-slate-900 transition-colors hover:bg-slate-50"
-              >
-                Solicita tu demo gratuita
-                <Anchor size={16} />
-              </Button>
+              <ContactModal plan="demo" icon={<Anchor size={16} />} />
             </motion.div>
           </motion.div>
         </div>
