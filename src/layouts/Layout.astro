@@ -3,6 +3,7 @@ import Header from "@/components/header/Header.astro";
 import "@fontsource/poppins";
 import Background from "@/components/Background";
 import WhatsappButton from "@/components/WhatsappButton";
+import Footer from "@/components/Footer.astro";
 ---
 
 <!doctype html>
@@ -25,7 +26,9 @@ import WhatsappButton from "@/components/WhatsappButton";
     <Background client:load />
     <Header />
     <slot />
+
     <WhatsappButton client:load />
+    <Footer />
   </body>
 </html>
 
