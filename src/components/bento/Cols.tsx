@@ -25,7 +25,7 @@ const BigCol1 = () => {
       <div className="absolute -bottom-8 xl:-bottom-12 left-8 aspect-[1363/548] w-full h-full max-h-[260px] xl:max-h-[360px] rounded-4xl overflow-hidden bg-white shadow">
         <img
           title="Imagen del Dashboard de Negoco CRM"
-          src="/images/analytics2.png"
+          src="/images/analytics2.webp"
           alt="Imagen del Dashboard de Negoco CRM"
           className="w-full h-full object-top-left object-cover "
         />

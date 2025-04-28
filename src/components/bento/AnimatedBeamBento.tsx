@@ -337,7 +337,7 @@ export function AnimatedBeamMultipleOutputDemo({
         <div className="flex flex-col justify-center">
           <Circle ref={div5Ref} className="aspect-[512/512] size-24 p-1">
             <img
-              src="/logo/logo_hd_opt.png"
+              src="/logo/logo_hd_opt.webp"
               alt="Logo"
               className="h-full w-full object-cover"
             />

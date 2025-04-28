@@ -9,7 +9,7 @@ export default function ScrollBlocker() {
     const timer = setTimeout(() => {
       html.style.overflowY = "auto";
       body.style.overflowY = "auto";
-    }, 3000);
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
 

@@ -6,7 +6,7 @@ import ContactModal from "./contact/ContactModal";
 export default function HeroSection() {
   return (
     <section className="w-full overflow-hidden pb-24 py-44 md:pt-48">
-      <div className="px-4 md:px-6 lg:px-12 max-w-[1200px] mx-auto flex flex-col items-center justify-center text-center">
+      <div className="px-4 md:px-6 lg:px-12 max-w-[1600px] mx-auto flex flex-col items-center justify-center text-center">
         <div className="flex flex-col items-center space-y-8 text-center">
           {/* Notification banner with animation */}
           <motion.div
@@ -14,8 +14,8 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.8, y: -20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{
-              duration: 0.6,
-              delay: 4.2,
+              duration: 0.5,
+              delay: 1.6,
               type: "spring",
               bounce: 0.4,
             }}
@@ -28,10 +28,10 @@ export default function HeroSection() {
           {/* Main heading with animation */}
           <div className="space-y-6">
             <motion.h1
-              className="text-primary-950 text-xl font-bold sm:text-2xl md:text-3xl lg:text-6xl tracking-tight font-eras leading-tight text-shadow-md text-pretty"
+              className="text-primary-950 text-xl font-bold sm:text-2xl md:text-3xl lg:text-7xl tracking-tight font-eras leading-tight text-shadow-md "
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 4.4, ease: "easeOut" }}
+              transition={{ duration: 0.5, delay: 1.8, ease: "easeOut" }}
             >
               El CRM para empresas energéticas y{" "}
               <span className="italic text-primary-700 font-clash-regular font-light">
@@ -41,10 +41,10 @@ export default function HeroSection() {
             </motion.h1>
 
             <motion.p
-              className="text-sm md:text-base xl:text-lg text-primary-900/80  w-full mx-auto leading-relaxed text-pretty"
+              className="text-sm md:text-base xl:text-lg text-primary-900/80 xl:max-w-5xl w-full mx-auto leading-relaxed text-pretty"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 4.6, ease: "easeOut" }}
+              transition={{ duration: 0.5, delay: 2, ease: "easeOut" }}
             >
               Digitaliza la gestión de clientes, automatiza procesos y mejora la
               productividad con un CRM diseñado para el sector energético.
@@ -58,7 +58,7 @@ export default function HeroSection() {
             className="flex flex-col gap-4 sm:flex-row"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 4.8, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: 2.2, ease: "easeOut" }}
           >
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
               {/* <Button className="inline-flex w-full h-12 items-center justify-center gap-2 rounded-md bg-primary-950 px-8 text-base font-medium text-white transition-colors hover:bg-[#1e293b]">

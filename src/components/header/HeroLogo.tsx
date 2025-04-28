@@ -21,7 +21,7 @@ export default function HeroLogo() {
         y: isMobile ? -10 : -70,
         scale: 0.5, // Se reduce de tamaño
       }}
-      transition={{ delay: 2, duration: 1.6, ease: "backIn" }}
+      transition={{ delay: 0.4, duration: 1.5, ease: "backInOut" }}
       className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-72 md:max-w-96 flex justify-center aspect-[2048/1950]"
     >
       <motion.div
@@ -41,9 +41,9 @@ export default function HeroLogo() {
       <motion.img
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.2 }}
         title="Negoco Cloud Logo"
-        src="/logo/logo_hd_opt.png"
+        src="/logo/logo_hd_opt.webp"
         alt="Negoco Cloud Logo"
         className="w-auto h-auto object-cover drop-shadow-lg"
       />

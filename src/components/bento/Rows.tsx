@@ -26,7 +26,7 @@ const BigRow1 = () => {
       <div className="relative bottom-0 right-8 flex justify-end aspect-[1809/288] w-full h-32 border border-gray-100 rounded-md overflow-hidden pe-1 ps-2 bg-white shadow">
         <img
           title="Imagen de los filtros del CRM"
-          src="/images/filters2.png"
+          src="/images/filters2.webp"
           alt="Imagen de los filtros del CRM"
           className="w-full h-auto object-top object-cover"
         />
@@ -34,7 +34,7 @@ const BigRow1 = () => {
       <div className="relative bottom-0 left-8 flex justify-end aspect-[1809/288] w-full h-32 border border-gray-100 rounded-md overflow-hidden pt-1 ps-1 pe-2 bg-white shadow">
         <img
           title="Imagen de los filtros del CRM"
-          src="/images/filters1.png"
+          src="/images/filters1.webp"
           alt="Imagen de los filtros del CRM"
           className="w-full h-auto object-top object-cover"
         />

@@ -114,7 +114,7 @@ export default function AnimatedFunnel() {
           <img
             title="Negoco Logo"
             loading="lazy"
-            src="/logo/logo_hd_opt.png"
+            src="/logo/logo_hd_opt.webp"
             alt="Negoco Logo"
             className="w-full h-full object-cover p-2 relative z-10 drop-shadow-sm"
           />
