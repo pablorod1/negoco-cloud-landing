@@ -4,6 +4,7 @@ import "@fontsource/poppins";
 import Background from "@/components/Background.astro";
 import WhatsappButton from "@/components/WhatsappButton";
 import Footer from "@/components/Footer.astro";
+import Analytics from "@vercel/analytics/astro";
 ---
 
 <!doctype html>
@@ -54,6 +55,7 @@ import Footer from "@/components/Footer.astro";
       type="image/webp"
       fetchpriority="high"
     />
+    <Analytics />
   </head>
 
   <body>
