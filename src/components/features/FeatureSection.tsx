@@ -139,6 +139,7 @@ const Feature = ({
                 )}
               >
                 <img
+                  title={title}
                   src={image}
                   alt={title}
                   className="w-full h-auto object-cover shadow-lg rounded-lg"
@@ -162,6 +163,7 @@ const Feature = ({
             className="w-full aspect-[1920/556]"
           >
             <img
+              title={title}
               src={images[0]}
               alt={title}
               className="w-full h-auto object-cover rounded-lg shadow-lg"

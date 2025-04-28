@@ -24,8 +24,9 @@ const BigCol1 = () => {
       </div>
       <div className="absolute -bottom-8 xl:-bottom-12 left-8 aspect-[1363/548] w-full h-full max-h-[260px] xl:max-h-[360px] rounded-4xl overflow-hidden bg-white shadow">
         <img
+          title="Imagen del Dashboard de Negoco CRM"
           src="/images/analytics2.png"
-          alt="Imagen de los filtros del CRM"
+          alt="Imagen del Dashboard de Negoco CRM"
           className="w-full h-full object-top-left object-cover "
         />
       </div>
@@ -45,6 +46,7 @@ const BigCol2 = () => {
       {/* Capa de imagen con overlay mejorado */}
       <div className="absolute inset-0 z-0 overflow-hidden w-full h-full">
         <img
+          title="Equipo de soporte de Negoco CRM"
           src="/images/support.webp"
           alt="Equipo de soporte de Negoco CRM"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 max-w-2xl"

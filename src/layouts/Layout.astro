@@ -10,11 +10,37 @@ import Footer from "@/components/Footer.astro";
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Negoco Cloud</title>
 
+    <!-- SEO Essentials -->
+    <title>Negoco Cloud | El CRM para Consultorías Energéticas</title>
+    <meta
+      name="description"
+      content="Negoco Cloud es el CRM diseñado para consultorías energéticas que buscan optimizar su gestión comercial y maximizar sus ventas. Solución adaptable, segura y potente."
+    />
+    <meta
+      name="keywords"
+      content="crm energía, crm, consultoría energética, crm para consultorías, crm para consultorías energéticas, gestión comercial energía, crm ventas energía"
+    />
+    <meta name="author" content="Negoco Cloud" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (para compartir en redes sociales y mejorar el CTR) -->
+    <meta
+      property="og:title"
+      content="Negoco Cloud | El CRM para Consultorías Energéticas"
+    />
+    <meta
+      property="og:description"
+      content="Impulsa la gestión y las ventas de tu consultoría energética con Negoco Cloud. CRM especializado, flexible y seguro."
+    />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:url" content="https://negococloud.es/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon & App Icons -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -22,11 +48,11 @@ import Footer from "@/components/Footer.astro";
     <meta name="apple-mobile-web-app-title" content="Negoco" />
     <link rel="manifest" href="/site.webmanifest" />
   </head>
+
   <body>
     <Background client:load />
     <Header />
     <slot />
-
     <WhatsappButton client:load />
     <Footer />
   </body>

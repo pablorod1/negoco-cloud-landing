@@ -301,7 +301,7 @@ export function AnimatedBeamMultipleOutputDemo({
             curvature={curvatures[0]}
             delay={0}
           >
-            <img src="/icons/excel.webp" alt="Excel Icon" />
+            <img src="/icons/excel.webp" alt="Excel Icon" title="Excel Icon" />
           </PathFollowingCircle>
           <PathFollowingCircle
             ref={div2Ref}

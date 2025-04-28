@@ -10,6 +10,7 @@ export default function WhatsappButton() {
       className="fixed bottom-8 right-8 z-50"
     >
       <a
+        title="Contacto de WhatsApp"
         href="https://wa.me/"
         target="_blank"
         rel="noopener noreferrer"

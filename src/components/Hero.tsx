@@ -66,7 +66,10 @@ export default function HeroSection() {
                 Contáctanos por Whatsapp
               </Button> */}
               <Button asChild variant="primary" size="lg">
-                <a href="mailto:info@negococloud.es">
+                <a
+                  title="Correo electrónico Negoco Cloud"
+                  href="mailto:info@negococloud.es"
+                >
                   <Mail />
                   Contáctanos por correo
                 </a>

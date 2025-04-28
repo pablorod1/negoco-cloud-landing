@@ -15,6 +15,7 @@ const socials = [
 >
   <p class="mb-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:mb-0">
     &copy; 2025 <a
+      title="Negoco Cloud"
       href="https://negococloud.es/"
       class="hover:underline"
       target="_blank">Negoco Cloud</a
@@ -24,6 +25,7 @@ const socials = [
     {
       socials.map((social) => (
         <a
+          title={social.name}
           href={social.link}
           target="_blank"
           rel="noopener noreferrer"

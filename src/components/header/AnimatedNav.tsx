@@ -9,7 +9,9 @@ export default function AnimatedNav() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 3.8, duration: 0.4 }}
         >
-          <a href="/contacto">Contacto</a>
+          <a title="Contacto" href="/contacto">
+            Contacto
+          </a>
         </motion.li>
 
         <motion.li
@@ -17,7 +19,9 @@ export default function AnimatedNav() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 4.2, duration: 0.4 }}
         >
-          <a href="/nosotros">Nosotros</a>
+          <a title="Nosotros" href="/nosotros">
+            Nosotros
+          </a>
         </motion.li>
       </ul>
     </nav>

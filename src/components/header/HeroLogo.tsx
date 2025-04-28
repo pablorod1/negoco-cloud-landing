@@ -42,6 +42,7 @@ export default function HeroLogo() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
+        title="Negoco Cloud Logo"
         src="/logo/logo_hd_opt.png"
         alt="Negoco Cloud Logo"
         className="w-auto h-auto object-cover drop-shadow-lg"

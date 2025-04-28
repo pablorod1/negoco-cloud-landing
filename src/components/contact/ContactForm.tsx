@@ -140,10 +140,11 @@ export default function ContactForm({
         <div className="text-sm text-gray-500 pt-2">
           Si tienes alguna pregunta urgente, contacta con nosotros en{" "}
           <a
-            href="mailto:info@negoco.com"
+            title="Enviar un correo electrónico a info@negococloud.es"
+            href="mailto:info@negococloud.es"
             className="text-green-600 hover:underline"
           >
-            info@negoco.com
+            info@negococloud.es
           </a>
         </div>
       </div>

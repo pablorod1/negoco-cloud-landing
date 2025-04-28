@@ -112,6 +112,8 @@ export default function AnimatedFunnel() {
         >
           <div className="absolute inset-0 rounded-full bg-primary-50/30 backdrop-blur-[2px]"></div>
           <img
+            title="Negoco Logo"
+            loading="lazy"
             src="/logo/logo_hd_opt.png"
             alt="Negoco Logo"
             className="w-full h-full object-cover p-2 relative z-10 drop-shadow-sm"
