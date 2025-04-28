@@ -11,21 +11,21 @@ export default function PricingSection() {
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="flex flex-col items-center justify-center gap-4 xl:gap-12 w-full xl:max-w-[1600px] mx-auto px-12 xl:px-6 py-16 pb-28"
+      className="flex flex-col items-center justify-center gap-4 xl:gap-12 w-full xl:max-w-[1600px] mx-auto px-12 py-24 xl:px-6 xl:py-16 pb-28"
     >
       <div className="flex flex-col gap-6 text-center">
         <span className="text-sm text-primary-700 font-medium tracking-widest uppercase">
           Comienza a crecer con Negoco Cloud
         </span>
         <div className="flex flex-col gap-4">
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-primary-950 text-pretty">
+          <h2 className="text-lg md:text-2xl lg:text-4xl font-bold text-primary-950 text-pretty">
             Nuestros precios escalan con tu{" "}
             <span className="italic text-primary-700 font-clash-regular font-light">
               negocio
             </span>
           </h2>
-          <p className="text-gray-500">
-            Prueba Negoco Cloud gratis durante 14 días. Sin tarjeta de crédito.
+          <p className="text-gray-500 text-sm md:text-base">
+            Prueba Negoco Cloud gratis durante 30 días. Sin tarjeta de crédito.
           </p>
         </div>
       </div>
@@ -60,7 +60,7 @@ export default function PricingSection() {
             )}
           ></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
           <PricingCard
             icon={<User size={16} />}
             title="Starter"

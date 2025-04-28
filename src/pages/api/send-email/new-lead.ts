@@ -1,3 +1,4 @@
+import { sendConfirmationEmail } from "@/lib/send-confirmation";
 import { sendNewLeadEmail } from "@/lib/send-new-lead-email";
 import type { APIRoute } from "astro";
 
@@ -34,6 +35,26 @@ export const POST: APIRoute = async ({ params, request }) => {
       return new Response(
         JSON.stringify({
           message: sendEmailResponse.error || "Error sending email",
+        }),
+        { status: 500 }
+      );
+    }
+
+    const sendConfirmationResponse = await sendConfirmationEmail({
+      name,
+      lastName,
+      email,
+      phone,
+      company,
+      plan,
+    });
+
+    if (!sendConfirmationResponse.success) {
+      return new Response(
+        JSON.stringify({
+          message:
+            sendConfirmationResponse.error ||
+            "Error sending confirmation email",
         }),
         { status: 500 }
       );

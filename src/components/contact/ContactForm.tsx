@@ -14,13 +14,7 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "../ui/select";
+import RadioCardsDemo from "../ui/radio-group-08";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -153,71 +147,63 @@ export default function ContactForm({
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}
           name="plan"
           render={({ field }) => (
             <FormItem>
-              <FormLabel htmlFor="plan">Plan</FormLabel>
+              <FormLabel htmlFor="plan">Elige tu plan</FormLabel>
               <FormControl>
-                <Select
+                <RadioCardsDemo
+                  defaultChecked={plan}
                   onValueChange={field.onChange}
-                  defaultValue={field.value}
-                >
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Selecciona un plan..." />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="demo">Prueba gratuita</SelectItem>
-                    <SelectItem value="starter">Starter</SelectItem>
-                    <SelectItem value="pro">Pro</SelectItem>
-                    <SelectItem value="elite">Elite</SelectItem>
-                  </SelectContent>
-                </Select>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel htmlFor="name">Nombre</FormLabel>
-              <FormControl>
-                <Input
-                  id="name"
-                  placeholder="Ejemplo: Juan"
-                  {...field}
-                  disabled={isSubmitting}
-                  className="focus:border-primary"
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <FormField
-          control={form.control}
-          name="lastName"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel htmlFor="lastName">Apellido</FormLabel>
-              <FormControl>
-                <Input
-                  id="lastName"
-                  placeholder="Ejemplo: Pérez"
-                  {...field}
-                  disabled={isSubmitting}
-                  className="focus:border-primary"
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel htmlFor="name">Nombre</FormLabel>
+                <FormControl>
+                  <Input
+                    id="name"
+                    placeholder="Ejemplo: Juan"
+                    {...field}
+                    disabled={isSubmitting}
+                    className="focus:border-primary"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="lastName"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel htmlFor="lastName">Apellidos</FormLabel>
+                <FormControl>
+                  <Input
+                    id="lastName"
+                    placeholder="Ejemplo: Pérez"
+                    {...field}
+                    disabled={isSubmitting}
+                    className="focus:border-primary"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
         <FormField
           control={form.control}
           name="email"
@@ -282,7 +268,7 @@ export default function ContactForm({
               Enviando...
             </>
           ) : (
-            "Solicitar Demo"
+            <>Enviar solicitud</>
           )}
         </Button>
       </form>

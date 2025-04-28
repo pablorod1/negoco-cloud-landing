@@ -28,7 +28,7 @@ export default function HeroSection() {
           {/* Main heading with animation */}
           <div className="space-y-6">
             <motion.h1
-              className="text-primary-950 text-xl font-bold sm:text-2xl md:text-3xl lg:text-7xl tracking-tight font-eras leading-tight text-shadow-md "
+              className="text-primary-950 text-xl font-bold sm:text-2xl md:text-3xl lg:text-5xl xl:text-7xl tracking-tight font-eras leading-tight text-shadow-md "
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.8, ease: "easeOut" }}
@@ -41,7 +41,7 @@ export default function HeroSection() {
             </motion.h1>
 
             <motion.p
-              className="text-sm md:text-base xl:text-lg text-primary-900/80 xl:max-w-5xl w-full mx-auto leading-relaxed text-pretty"
+              className="text-sm md:text-base xl:text-lg text-primary-900/80 lg:max-w-4xl xl:max-w-5xl w-full mx-auto leading-relaxed text-pretty"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 2, ease: "easeOut" }}

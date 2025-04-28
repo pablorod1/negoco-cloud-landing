@@ -38,20 +38,27 @@ export default function PricingCard({
   return (
     <MotionCard
       initial={{
-        scale: 0.8,
+        scale: 0.95,
         opacity: 0,
-        x: main ? 0 : title === "Starter" ? 300 : -300,
+        y: 20,
+        x: main ? 0 : title === "Starter" ? 100 : -100,
       }}
-      whileInView={{ scale: 1, opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.6 }}
+      whileInView={{ scale: 1, opacity: 1, y: 0, x: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
       transition={{
-        duration: 0.5,
-        delay: main ? 0 : title === "Starter" ? 0.2 : 0.4,
+        type: "spring",
+        stiffness: 100,
+        damping: 15,
+        delay: main ? 0 : title === "Starter" ? 0.1 : 0.2,
       }}
-      className={`relative overflow-hidden border-0 p-8 w-full bg-white ${
+      whileHover={{
+        scale: 1.02,
+        transition: { duration: 0.2 },
+      }}
+      className={`relative overflow-hidden border-0 md:p-8 p-4 w-full bg-white ${
         main
-          ? "shadow-[0px_0px_16px_0px_rgba(37,99,235,0.3)] z-10"
-          : "shadow-md border border-gray-200 scale-95 z-0"
+          ? "shadow-[0px_0px_16px_0px_rgba(37,99,235,0.3)] z-10 md:scale-100 scale-100"
+          : "shadow-md border border-gray-200 md:scale-95 scale-100 z-0"
       } `}
     >
       {main && (
@@ -69,19 +76,21 @@ export default function PricingCard({
           - {planDiscount} %
         </Badge>
       )}
-      <CardHeader className="gap-6">
+      <CardHeader className="gap-4 md:gap-6 p-0 md:p-6">
         <CardDescription>
           <div className="flex items-center gap-2">
             {icon}
             <h3 className="italic">{title}</h3>
           </div>
         </CardDescription>
-        <CardTitle className="py-6">
+        <CardTitle className="py-4 md:py-6">
           <div className="flex items-baseline">
-            <span className="text-[48px] font-semibold tracking-tight text-primary-950/90">
+            <span className="text-[32px] md:text-[48px] font-semibold tracking-tight text-primary-950/90">
               {price[plan]}€
             </span>
-            <span className="ml-1 text-[14px] text-gray-400">/mes</span>
+            <span className="ml-1 text-[12px] md:text-[14px] text-gray-400">
+              /mes
+            </span>
           </div>
           {pricePerUser && (
             <p className="mt-2 text-xs text-gray-400 font-light">
@@ -90,16 +99,19 @@ export default function PricingCard({
           )}
         </CardTitle>
       </CardHeader>
-      <CardContent className="h-full flex flex-col">
-        <ul className="flex flex-col gap-2 space-y-3 flex-1">
+      <CardContent className="h-full flex flex-col p-0 md:p-6">
+        <ul className="flex flex-col gap-1 md:gap-2 space-y-2 md:space-y-3 flex-1">
           {features.map((feature, index) => (
-            <li key={index} className="flex items-center gap-2 text-sm">
+            <li
+              key={index}
+              className="flex items-center gap-2 text-xs md:text-sm"
+            >
               <span className="text-primary-500">•</span>
               {feature}
             </li>
           ))}
         </ul>
-        <div className="flex flex-col items-center justify-center gap-2 mt-8">
+        <div className="flex flex-col items-center justify-center gap-2 mt-6 md:mt-8">
           {main ? (
             <ContactModal
               buttonText="Seleccionar"
@@ -113,7 +125,7 @@ export default function PricingCard({
             />
           )}
           {title === "Starter" && (
-            <p className="text-xs text-gray-500 mt-2">
+            <p className="text-[10px] md:text-xs text-gray-500 mt-2">
               1 mes de prueba gratis. Sin tarjeta de crédito.
             </p>
           )}

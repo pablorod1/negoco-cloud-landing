@@ -44,13 +44,12 @@ export default function ContactModal({
           {icon ? icon : null}
         </Button>
       </DialogTrigger>
-      <DialogContent>
-        <DialogHeader>
+      <DialogContent className="md:max-w-[650px] w-full">
+        <DialogHeader className="mb-4">
           <DialogTitle className="text-primary-800">{getTitle()}</DialogTitle>
           <DialogDescription className="text-sm text-gray-600">
             Completa el siguiente formulario y nos pondremos en contacto contigo
-            para ofrecerte una prueba gratuita de 30 días de Negoco Cloud. Sin
-            tarjeta de crédito. Sin compromiso.
+            lo antes posible.
           </DialogDescription>
         </DialogHeader>
         <ContactForm plan={plan} />
