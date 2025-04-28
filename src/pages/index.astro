@@ -9,7 +9,7 @@ import PricingSection from "@/components/pricing/PricingSection";
 
 <Layout>
   <ScrollBlocker client:load />
-  <Hero client:load />
-  <AnimatedSection client:load />
-  <PricingSection client:only="react" />
+  <Hero client:visible />
+  <AnimatedSection client:visible />
+  <PricingSection client:visible />
 </Layout>

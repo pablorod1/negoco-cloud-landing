@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import PricingCard from "./PricingCard";
-import { BadgeCheck, Crown, Paintbrush2, User } from "lucide-react";
-import { Button } from "../ui/button";
+import { BadgeCheck, Crown, User } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
