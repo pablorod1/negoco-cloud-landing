@@ -22,7 +22,7 @@ const BigCol1 = () => {
           unificado. Mejora la productividad con Negoco Cloud.
         </p>
       </div>
-      <div className="absolute -bottom-8 xl:-bottom-12 left-8 aspect-[1363/548] w-full h-full max-h-[260px] xl:max-h-[360px] rounded-4xl overflow-hidden bg-white shadow">
+      <div className="absolute -bottom-6 sm:-bottom-8 md:-bottom-24 xl:-bottom-12 left-8 aspect-[1363/548] w-full h-full max-h-[260px] sm:max-h-[340px] md:max-h-[420px] xl:max-h-[360px] rounded-4xl overflow-hidden bg-white shadow">
         <img
           title="Imagen del Dashboard de Negoco CRM"
           src="/images/analytics2.webp"
@@ -49,7 +49,7 @@ const BigCol2 = () => {
           title="Equipo de soporte de Negoco CRM"
           src="/images/support.webp"
           alt="Equipo de soporte de Negoco CRM"
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 max-w-2xl"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary-900 via-primary-800/60 to-primary-800/20 opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
       </div>
@@ -109,9 +109,11 @@ const BigCol3 = () => {
         </div>
 
         <div className="w-full h-full flex items-center justify-center gap-6">
+          <PerformanceChart value={96} opacity="opacity-20" />
           <PerformanceChart value={97} opacity="opacity-20" />
           <PerformanceChart value={98} />
           <PerformanceChart value={99} opacity="opacity-20" />
+          <PerformanceChart value={100} opacity="opacity-20" />
         </div>
       </div>
     </motion.div>

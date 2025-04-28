@@ -84,8 +84,8 @@ const Feature = ({
     >
       <div
         className={cn(
-          "flex flex-col items-center lg:items-start lg:justify-between gap-8 md:gap-12 lg:gap-16 xl:gap-24",
-          reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+          "flex flex-col items-center xl:items-start xl:justify-between gap-8 md:gap-12  xl:gap-24",
+          reverse ? "xl:flex-row-reverse" : "xl:flex-row"
         )}
       >
         <motion.div
@@ -100,7 +100,7 @@ const Feature = ({
             damping: 20,
           }}
           viewport={{ once: true, amount: 0.4 }}
-          className="flex flex-col gap-4 md:gap-6 text-center lg:text-left w-full lg:w-2/5 xl:w-[45%] px-0"
+          className="flex flex-col gap-4 md:gap-6 text-center lg:text-left w-full  xl:w-[45%] px-0"
         >
           {badge && (
             <span className="text-xs md:text-sm text-primary-700 font-medium tracking-widest uppercase text-nowrap">
@@ -115,7 +115,7 @@ const Feature = ({
           </div>
         </motion.div>
         {images.length > 1 ? (
-          <div className="relative min-h-[250px] sm:min-h-[300px] md:min-h-[350px] lg:min-h-[400px] h-full w-full max-w-4xl lg:w-3/5 xl:w-[55%] flex justify-center lg:justify-end mt-8 lg:mt-0">
+          <div className="relative min-h-[250px] sm:min-h-[300px] md:min-h-[350px] lg:min-h-[400px] h-full w-full max-w-4xl  xl:w-[55%] flex justify-center lg:justify-end mt-8 lg:mt-0">
             {images.map((image, index) => (
               <motion.div
                 initial={{ scale: 0.7, opacity: 0, y: 30 }}

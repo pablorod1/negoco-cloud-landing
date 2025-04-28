@@ -59,9 +59,11 @@ const BigRow2 = () => {
       </h3>
 
       <div className="w-full h-full flex justify-center items-center gap-5">
+        <PerformanceChart value={96} opacity="opacity-30" />
         <PerformanceChart value={97} opacity="opacity-30" />
         <PerformanceChart value={98} />
         <PerformanceChart value={99} opacity="opacity-30" />
+        <PerformanceChart value={100} opacity="opacity-30" />
       </div>
 
       <div className="flex flex-col items-center gap-4">
