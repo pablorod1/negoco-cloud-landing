@@ -38,14 +38,12 @@ export default function HeroLogo() {
           más ágil • más eficiente • más rentable •
         </SpinningText>
       </motion.div>
-      <motion.img
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.2 }}
+      <img
         title="Negoco Cloud Logo"
         src="/logo/logo_hd_opt.webp"
         alt="Negoco Cloud Logo"
         className="w-auto h-auto object-cover drop-shadow-lg"
+        fetchPriority="high"
       />
     </motion.div>
   );
