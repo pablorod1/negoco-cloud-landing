@@ -17,24 +17,11 @@
   font-display: swap;
 }
 
-@font-face{
+@font-face {
   font-family: "Raymond Signature";
   src: url("/fonts/RaymondSignature.ttf") format("truetype");
   font-style: normal;
   font-display: swap;
-}
-
-.bg-noise {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-}
-
-.perspective-1000 {
-  perspective: 1000px;
-}
-
-.perspective-text {
-  transform-style: preserve-3d;
-  transition: transform 0.3s ease;
 }
 
 :root {
@@ -86,7 +73,6 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-
 }
 
 @layer utilities {
@@ -94,7 +80,7 @@
     -webkit-text-stroke: 1px #007bff; /* Contorno azul */
   }
 
-  .text-outline-none{
+  .text-outline-none {
     -webkit-text-stroke: 0px #007bff; /* Sin contorno */
   }
 
@@ -107,29 +93,11 @@
   }
 }
 
-.animate-size{
+.animate-size {
   interpolate-size: allow-keywords;
 }
 
-.magicpattern {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: repeat;
-  background-image: url("data:image/svg+xml;utf8,%3Csvg height=%22auto%22 viewBox=%220 0 2000 1400%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath d=%22M0 1343.79c16.65-7.926 299.7-143.365 333-158.514 33.3-15.15 299.7-134.465 333-144.473 33.3-10.009 299.7-48.372 333-55.696 33.3-7.325 299.7-74.41 333-90.795 33.3-16.385 299.7-206.175 333-236.897 33.3-30.721 316.35-358.653 333-377.53L2000 1400H0Z%22 fill=%22%231d64d81a%22%2F%3E%3Cpath d=%22M0 1343.79c16.65-7.926 299.7-143.365 333-158.514 33.3-15.15 299.7-134.465 333-144.473 33.3-10.009 299.7-48.372 333-55.696 33.3-7.325 299.7-74.41 333-90.795 33.3-16.385 299.7-206.175 333-236.897 33.3-30.721 316.35-358.653 333-377.53%22 fill=%22none%22 stroke=%22%231d64d8%22 stroke-width=%222%22%2F%3E%3Cg fill=%22%231d64d8%22%3E%3Ccircle cy=%221343.789%22 r=%226%22%2F%3E%3Ccircle cx=%22333%22 cy=%221185.276%22 r=%226%22%2F%3E%3Ccircle cx=%22666%22 cy=%221040.803%22 r=%226%22%2F%3E%3Ccircle cx=%22999%22 cy=%22985.107%22 r=%226%22%2F%3E%3Ccircle cx=%221332%22 cy=%22894.312%22 r=%226%22%2F%3E%3Ccircle cx=%221665%22 cy=%22657.415%22 r=%226%22%2F%3E%3Ccircle cx=%221998%22 cy=%22279.885%22 r=%226%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-}
-
-.mask-image{
-  mask-image: linear-gradient(to top, black 80%, transparent);
-
-}
-
 @theme {
-
 }
 
 @layer base {
@@ -195,21 +163,19 @@
   --font-clash-regular: "Clash Display Regular", sans-serif;
   --font-raymond: "Raymond Signature", sans-serif;
 
-  --mask-image: mask-image: linear-gradient(to bottom, black 80%, transparent);
-
   --animate-shine: shine var(--duration) infinite linear;
 
   --shadow-center: 0 0 8px 1px rgba(0, 0, 0, 0.1);
 
   @keyframes shine {
-  0% {
-    background-position: 0% 0%;
+    0% {
+      background-position: 0% 0%;
     }
-  50% {
-    background-position: 100% 100%;
+    50% {
+      background-position: 100% 100%;
     }
-  to {
-    background-position: 0% 0%;
+    to {
+      background-position: 0% 0%;
     }
   }
   --color-color-1: var(----color-1);
@@ -235,22 +201,21 @@
 
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
 
-
   @keyframes marquee {
-  from {
-    transform: translateX(0);
-   
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
 
   @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+    from {
+      transform: translateY(0);
     }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
     }
-  }}
+  }
+}
