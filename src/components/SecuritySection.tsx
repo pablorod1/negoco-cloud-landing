@@ -48,7 +48,7 @@ export default function SecuritySection() {
         >
           <SecurityBubble
             title="Seguridad de Datos"
-            description="Mantén la privacidad de los datos de tus clientes con nuestra gestión avanzada de seguridad."
+            description="Mantén la privacidad de los datos con nuestra gestión avanzada de seguridad."
             icon={<Lock className="h-6 w-6 text-primary-600" />}
             position="left"
           />

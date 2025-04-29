@@ -8,7 +8,7 @@ export default function ComunicacionSection() {
     <SectionComponent
       id="comunicacion"
       title="Comunicación Comercial en Tiempo Real"
-      subtitle="Mejora la colaboración entre comerciales, gerentes y clientes con alertas inteligentes que mantienen a todos informados al instante. Gestiona tus servicios y trámites con mayor agilidad y control."
+      subtitle="Mejora la colaboración entre comerciales y gerentes con alertas inteligentes que mantienen a todos informados al instante. Gestiona tus servicios y trámites con mayor agilidad y control."
       layout="centered"
     >
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-16 max-w-7xl mx-auto items-stretch">
