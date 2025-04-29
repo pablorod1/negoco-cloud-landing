@@ -99,7 +99,7 @@ export default function SectionComponent({
             "flex flex-col gap-4 items-center xl:items-start",
             layout === "standard" && "text-center xl:text-left",
             layout === "reverse" && "text-center xl:text-left xl:self-start",
-            layout === "centered" && "text-center",
+            layout === "centered" && "text-center xl:items-center",
             "max-w-4xl",
             stickyHeader ? "xl:sticky xl:top-8" : ""
           )}

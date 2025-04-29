@@ -9,7 +9,7 @@ const BigCol1 = () => {
     <motion.div
       initial={{ scale: 0.95, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.6 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
       viewport={{ once: true, amount: 0.2 }}
       className="min-h-[420px] lg:col-span-2 bg-gradient-to-b from-white via-white to-primary-200 flex flex-col gap-4 rounded-3xl relative overflow-hidden h-full shadow-center p-6"
     >
@@ -39,7 +39,7 @@ const BigCol2 = () => {
     <motion.div
       initial={{ scale: 0.95, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.8 }}
+      transition={{ duration: 0.5, delay: 0.4 }}
       viewport={{ once: true, amount: 0.2 }}
       className="min-h-[420px] lg:col-start-3 shadow-center rounded-3xl relative overflow-hidden h-full group"
     >
@@ -92,7 +92,7 @@ const BigCol3 = () => {
     <motion.div
       initial={{ scale: 0.95, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 1 }}
+      transition={{ duration: 0.5, delay: 0.6 }}
       viewport={{ once: true, amount: 0.2 }}
       className="min-h-[420px] shadow-center rounded-3xl relative overflow-hidden h-full group p-6 bg-gradient-to-br from-primary-200 to-primary-300 brightness-120"
     >

@@ -131,7 +131,7 @@ const Feature = ({
                 key={index}
                 className={cn(
                   "w-full h-full aspect-[901/542] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg p-0 rounded-lg",
-                  "absolute",
+                  "absolute hover:z-[60] hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer",
                   index === 0
                     ? !reverse
                       ? "top-0 right-0 md:right-8 lg:right-0"

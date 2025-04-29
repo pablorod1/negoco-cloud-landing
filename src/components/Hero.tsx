@@ -10,17 +10,17 @@ export default function HeroSection() {
         <div className="flex flex-col items-center space-y-8 text-center">
           {/* Notification banner with animation */}
           <motion.div
-            className="inline-flex items-center rounded-full bg-primary-50 px-4 py-1.5 text-sm font-medium text-primary-800 shadow-xl ring-1 ring-primary-300"
-            initial={{ opacity: 0, scale: 0.8, y: -20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
+            className="inline-flex items-center rounded-full bg-primary-950 px-6 py-1.5 text-sm font-medium text-white ring-1 ring-primary-900 shadow-badge"
+            initial={{ opacity: 0, scale: 0.6 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{
               duration: 0.5,
-              delay: 1.6,
+              delay: 2,
               type: "spring",
-              bounce: 0.4,
+              bounce: 0.6,
             }}
           >
-            <span className="animate-pulse text-sm font-semibold tracking-wide drop-shadow-[0_0_6px_rgba(99,102,241,0.2)]">
+            <span className="animate-in text-sm tracking-wide ">
               ¡Negoco Cloud ya está aquí! 🚀
             </span>
           </motion.div>
