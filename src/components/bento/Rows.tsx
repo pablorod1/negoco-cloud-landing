@@ -1,5 +1,4 @@
 import {
-  Cloud,
   Filter,
   Folder,
   Mail,
@@ -9,8 +8,8 @@ import {
   Users2,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { Button } from "../ui/button";
 import { PerformanceChart } from "./PerformanceChart";
+import ContactModal from "../contact/ContactModal";
 
 const items = [
   {
@@ -98,10 +97,12 @@ const BigRow2 = () => {
       </div>
 
       <div className="flex flex-col items-center gap-4">
-        <Button variant="primary">
-          <Play className="size-4" strokeWidth={3} />
-          <span>Solicita tu demo gratuita</span>
-        </Button>
+        <ContactModal
+          plan="demo"
+          buttonText="Solicita tu demo gratuita"
+          buttonVariant="primary"
+          icon={<Play className="size-4" />}
+        />
         <p className="text-gray-600 text-xs text-center ">
           * Sin tarjeta de crédito. 30 días de prueba.
         </p>

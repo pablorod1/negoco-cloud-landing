@@ -1,6 +1,8 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { motion, type Variants } from "framer-motion";
+import ContactModal from "./contact/ContactModal";
+import { Play } from "lucide-react";
 
 interface SectionComponentProps {
   children: React.ReactNode;
@@ -14,6 +16,7 @@ interface SectionComponentProps {
   layout?: "standard" | "reverse" | "centered";
   withAnimation?: boolean;
   stickyHeader?: boolean;
+  ctaButton?: boolean;
 }
 
 const sectionVariants: Variants = {
@@ -59,6 +62,7 @@ export default function SectionComponent({
   layout = "standard",
   withAnimation = true,
   stickyHeader = false,
+  ctaButton = false,
 }: SectionComponentProps) {
   // Define layout-specific classes
   const layoutClasses = {
@@ -86,7 +90,7 @@ export default function SectionComponent({
       id={id}
       className={cn(
         layoutClasses[layout],
-        "w-full xl:max-w-[1600px] mx-auto px-12 py-24 xl:px-6 xl:py-44 pb-28 relative",
+        "w-full xl:max-w-[1600px] mx-auto px-12 py-24 xl:px-6 xl:py-44 pb-28 relative space-y-16",
         !stickyHeader ? "overflow-hidden" : "",
         className
       )}
@@ -100,7 +104,7 @@ export default function SectionComponent({
             layout === "standard" && "text-center xl:text-left",
             layout === "reverse" && "text-center xl:text-left xl:self-start",
             layout === "centered" && "text-center xl:items-center",
-            "max-w-4xl",
+            "max-w-4xl xl:max-w-2xl",
             stickyHeader ? "xl:sticky xl:top-8" : ""
           )}
           initial={withAnimation ? "hidden" : undefined}
@@ -128,6 +132,14 @@ export default function SectionComponent({
             >
               {subtitle}
             </motion.p>
+          )}
+          {ctaButton && (
+            <ContactModal
+              plan="demo"
+              buttonText="Solicita tu prueba gratuita"
+              buttonVariant="primary"
+              icon={<Play className="size-4" />}
+            />
           )}
         </motion.div>
       )}

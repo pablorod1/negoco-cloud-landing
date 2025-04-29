@@ -24,9 +24,9 @@ export default function ContactModal({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant={buttonVariant} size="lg" className="w-full">
-          {buttonText}
+        <Button variant={buttonVariant} size="lg" className="w-full max-w-2xs">
           {icon ? icon : null}
+          {buttonText}
         </Button>
       </DialogTrigger>
       <DialogContent className="md:max-w-[650px] w-full">
