@@ -84,7 +84,7 @@ const Feature = ({
     >
       <div
         className={cn(
-          "flex flex-col items-center xl:items-start xl:justify-between gap-8 md:gap-12  xl:gap-24",
+          "flex flex-col items-center xl:items-start xl:justify-between gap-8 md:gap-12 xl:gap-32",
           reverse ? "xl:flex-row-reverse" : "xl:flex-row"
         )}
       >
