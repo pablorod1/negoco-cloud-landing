@@ -57,14 +57,14 @@ const BigRow1 = () => {
           gracias a Negoco Cloud.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-8 w-full h-full justify-between">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-8 w-full h-full justify-between">
         {items.map((item, index) => (
           <div
             key={index}
             className="flex flex-col items-center gap-4 text-gray-700 text-xs text-center "
           >
             <div className="bg-primary-950 rounded-xl p-4 text-gray-100 shadow-badge border border-primary-900">
-              <item.icon className="size-8" />
+              <item.icon className="size-4 md:size-6 xl:size-8" />
             </div>
             <p className="text-gray-600">{item.title}</p>
           </div>

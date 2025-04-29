@@ -10,7 +10,7 @@ export default function AnimatedSection() {
       exit={{ y: -100 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="flex flex-col gap-y-44 w-full rounded-xl xl:mask-t-from-95% xl:mask-b-from-95% bg-white/90 px-12 xl:px-6 py-12 xl:py-24 z-50 relative"
+      className="flex flex-col gap-y-44 w-full px-12 xl:px-6 py-12 xl:py-24 z-50 relative"
     >
       <motion.div
         initial={{ opacity: 0 }}
