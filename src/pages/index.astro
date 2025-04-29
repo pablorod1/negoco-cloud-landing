@@ -5,11 +5,17 @@ import "../styles/global.css";
 import ScrollBlocker from "@/components/ScrollBlocker";
 import AnimatedSection from "@/components/AnimatedSection";
 import PricingSection from "@/components/pricing/PricingSection";
+import Services from "@/components/Services";
+import SecuritySection from "@/components/SecuritySection";
 ---
 
 <Layout>
-  <ScrollBlocker client:load />
-  <Hero client:visible />
-  <AnimatedSection client:visible />
-  <PricingSection client:visible />
+  <main>
+    <ScrollBlocker client:load />
+    <Hero client:visible />
+    <AnimatedSection client:visible />
+    <Services client:visible />
+    <SecuritySection client:visible />
+    <PricingSection client:visible />
+  </main>
 </Layout>

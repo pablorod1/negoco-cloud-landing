@@ -103,7 +103,7 @@ const Feature = ({
           className="flex flex-col gap-4 md:gap-6 text-center lg:text-left w-full  xl:w-[45%] px-0"
         >
           {badge && (
-            <span className="text-xs md:text-sm text-primary-700 font-medium tracking-widest uppercase text-nowrap">
+            <span className="text-xs md:text-sm text-primary-700 font-medium tracking-widest uppercase">
               {badge}
             </span>
           )}
