@@ -104,7 +104,7 @@ function SecurityBubble({
     <>
       {!isMobile ? (
         <HoverCard openDelay={0}>
-          <HoverCardTrigger>
+          <HoverCardTrigger aria-label={`Descubrir más sobre ${title}`}>
             <div className="p-3 bg-white rounded-full cursor-pointer shadow-inner">
               {icon}
             </div>
