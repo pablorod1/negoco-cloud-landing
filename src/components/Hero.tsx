@@ -5,10 +5,14 @@ import ContactModal from "./contact/ContactModal";
 
 export default function HeroSection() {
   return (
-    <section className="w-full overflow-hidden pb-24 py-44 md:pt-48">
-      <div className="px-4 md:px-6 lg:px-12 max-w-[1600px] mx-auto flex flex-col items-center justify-center text-center">
-        <div className="flex flex-col items-center space-y-8 text-center">
-          {/* Notification banner with animation */}
+    <section
+      className="w-full overflow-hidden pb-24 py-44 md:pt-48"
+      aria-labelledby="hero-heading"
+    >
+      <article className="px-4 md:px-6 lg:px-12 max-w-[1600px] mx-auto flex flex-col items-center justify-center text-center">
+        {/* Header semántico */}
+        <header className="flex flex-col items-center space-y-8 text-center">
+          {/* Banner animado */}
           <motion.div
             className="inline-flex items-center rounded-full bg-primary-950 px-6 py-1.5 text-sm font-medium text-white ring-1 ring-primary-900 shadow-badge"
             initial={{ opacity: 0, scale: 0.6 }}
@@ -20,15 +24,16 @@ export default function HeroSection() {
               bounce: 0.6,
             }}
           >
-            <span className="animate-in text-sm tracking-wide ">
+            <span className="animate-in text-sm tracking-wide">
               ¡Negoco Cloud ya está aquí! 🚀
             </span>
           </motion.div>
 
-          {/* Main heading with animation */}
+          {/* Título principal + subtítulo */}
           <div className="space-y-6">
             <motion.h1
-              className="text-primary-950 text-xl font-bold sm:text-2xl md:text-3xl lg:text-5xl xl:text-7xl tracking-tight font-eras leading-tight text-shadow-md "
+              id="hero-heading"
+              className="text-primary-950 text-xl font-bold sm:text-2xl md:text-3xl lg:text-5xl xl:text-7xl tracking-tight font-eras leading-tight text-shadow-md"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.8, ease: "easeOut" }}
@@ -52,8 +57,10 @@ export default function HeroSection() {
               primer día.
             </motion.p>
           </div>
+        </header>
 
-          {/* CTA buttons with animation */}
+        {/* Footer con CTAs */}
+        <footer className="mt-10">
           <motion.div
             className="flex flex-col gap-4 sm:flex-row"
             initial={{ opacity: 0, y: 20 }}
@@ -61,10 +68,6 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 2.2, ease: "easeOut" }}
           >
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-              {/* <Button className="inline-flex w-full h-12 items-center justify-center gap-2 rounded-md bg-primary-950 px-8 text-base font-medium text-white transition-colors hover:bg-[#1e293b]">
-                <WhatsApp className="h-12 w-12" />
-                Contáctanos por Whatsapp
-              </Button> */}
               <Button asChild variant="primary" size="lg">
                 <a
                   title="Correo electrónico Negoco Cloud"
@@ -80,8 +83,15 @@ export default function HeroSection() {
               <ContactModal plan="demo" icon={<Anchor size={16} />} />
             </motion.div>
           </motion.div>
-        </div>
-      </div>
+        </footer>
+      </article>
+
+      {/* Texto alternativo para accesibilidad y SEO */}
+      <p className="sr-only">
+        Negoco Cloud es un CRM diseñado para el sector de la energía. Mejora la
+        gestión de clientes, automatiza procesos y reduce costes desde el primer
+        día.
+      </p>
     </section>
   );
 }

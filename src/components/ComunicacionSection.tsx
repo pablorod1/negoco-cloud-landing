@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils";
 import SectionComponent from "./SectionComponent";
 import { BellRing, MailCheck, Users2 } from "lucide-react";
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
 
 export default function ComunicacionSection() {
   return (
