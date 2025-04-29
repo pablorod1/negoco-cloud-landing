@@ -52,8 +52,9 @@ const BigRow1 = () => {
           Todo tu negocio en un solo lugar
         </h3>
         <p className="text-gray-700 text-xs">
-          Supervisa clientes, ventas y equipos desde un panel de control
-          unificado. Mejora la productividad con Negoco Cloud.
+          Centraliza todas las operaciones comerciales en una única plataforma
+          web. Controla tus procesos clave con eficiencia y visión estratégica
+          gracias a Negoco Cloud.
         </p>
       </div>
       <div className="grid grid-cols-3 gap-8 w-full h-full justify-between">

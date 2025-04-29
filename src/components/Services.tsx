@@ -30,7 +30,7 @@ export default function ServicesSection() {
   return (
     <SectionComponent
       title="Servicios que Potencian tu Empresa Energética"
-      subtitle="Transforma la forma en que gestionas tu empresa energética con un software diseñado específicamente para el sector energético."
+      subtitle="Transforma la forma en que gestionas tu empresa energética con un software diseñado específicamente para el sector de la energía."
       layout="reverse"
       stickyHeader={true}
     >
@@ -56,8 +56,8 @@ export default function ServicesSection() {
         />
 
         <ServiceCard
-          title="Software de Gestión de Suministro Energético"
-          description="Gestiona todo el proceso de suministro energético desde la cotización hasta la implementación."
+          title="Gestión Documental para Contratación Energética"
+          description="Centraliza contratos, mandatos y documentos clave, adaptados a los flujos de trabajo del sector energético."
           variants={cardVariants}
           icon="energy"
         />

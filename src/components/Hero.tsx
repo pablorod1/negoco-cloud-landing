@@ -52,7 +52,7 @@ export default function HeroSection() {
               transition={{ duration: 0.5, delay: 2, ease: "easeOut" }}
             >
               Digitaliza la gestión de clientes, automatiza procesos y mejora la
-              productividad con un CRM diseñado para el sector energético.
+              productividad con un CRM diseñado para el sector de la energía.
               Negoco Cloud potencia tu operativa diaria y reduce costes desde el
               primer día.
             </motion.p>

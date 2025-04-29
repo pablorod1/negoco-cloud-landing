@@ -7,7 +7,7 @@ export default function ComunicacionSection() {
   return (
     <SectionComponent
       id="comunicacion"
-      title="Comunicación en Tiempo Real con tu Equipo"
+      title="Comunicación Comercial en Tiempo Real"
       subtitle="Mejora la colaboración entre comerciales, gerentes y clientes con alertas inteligentes que mantienen a todos informados al instante. Gestiona tus servicios y trámites con mayor agilidad y control."
       layout="centered"
     >
@@ -21,14 +21,14 @@ export default function ComunicacionSection() {
         <CommunicationCard
           index={1}
           icon={Users2}
-          title="Mejor coordinación de equipos"
+          title="Mejor coordinación de colaboradores"
           description="Optimiza la comunicación interna en tu empresa. Los comerciales y gerentes gestionan tareas y datos con mayor claridad, reduciendo errores y mejorando la eficiencia operativa en cada servicio."
         />
         <CommunicationCard
           index={2}
           icon={MailCheck}
           title="Notificaciones personalizadas"
-          description="En breve, los gerentes podrán enviar mensajes personalizados a uno o varios usuarios del equipo. Adáptate a las necesidades específicas de cada colaborador en función de su rol y sector."
+          description="En breve, los gerentes podrán enviar mensajes personalizados a uno o varios de sus colaboradores. Adáptate a las necesidades específicas de cada colaborador en función de su rol y sector."
         />
       </div>
     </SectionComponent>

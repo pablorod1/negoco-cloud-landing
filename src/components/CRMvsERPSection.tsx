@@ -8,7 +8,7 @@ type ComparisonRow = {
 
 const comparisonData: ComparisonRow[] = [
   {
-    erp: "No están diseñados para gestionar comparativas, contratos ni clientes del sector energético",
+    erp: "No están diseñados para gestionar comparativas, contratos ni clientes",
     negoco:
       "Diseñado 100% para el sector energético, sin personalizaciones externas",
   },

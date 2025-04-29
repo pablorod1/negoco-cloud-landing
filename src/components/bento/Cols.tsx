@@ -19,7 +19,8 @@ const BigCol1 = () => {
         </h3>
         <p className="text-gray-700 text-xs">
           Supervisa clientes, ventas y equipos desde un panel de control
-          unificado. Mejora la productividad con Negoco Cloud.
+          unificado, accesible desde cualquier navegador web. Mejora la
+          productividad con Negoco Cloud.
         </p>
       </div>
       <div className="absolute -bottom-6 sm:-bottom-8 md:-bottom-24 xl:-bottom-12 left-8 aspect-[1363/548] w-full h-full max-h-[260px] sm:max-h-[340px] md:max-h-[420px] xl:max-h-[360px] rounded-4xl overflow-hidden bg-white shadow">
