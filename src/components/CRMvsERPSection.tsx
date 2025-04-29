@@ -10,7 +10,7 @@ const comparisonData: ComparisonRow[] = [
   {
     erp: "No están diseñados para gestionar comparativas, contratos ni clientes",
     negoco:
-      "Diseñado 100% para el sector energético, sin personalizaciones externas",
+      "Diseñado 100% para el sector energético, optimizando la gestión de clientes y el contacto directo con ellos",
   },
   {
     erp: "Altos costes de implantación, personalización y mantenimiento",

@@ -30,7 +30,7 @@ export default function ServicesSection() {
   return (
     <SectionComponent
       title="Servicios que Potencian tu Empresa Energética"
-      subtitle="Transforma la forma en que gestionas tu empresa energética con un software diseñado específicamente para el sector de la energía."
+      subtitle="Transforma la forma en que gestionas tu empresa energética con Negoco Cloud, el software CRM diseñado exclusivamente para el sector de la energía."
       layout="reverse"
       stickyHeader={true}
     >

@@ -20,9 +20,11 @@ export default function PricingSection() {
         <div className="flex flex-col gap-4">
           <h2 className="text-lg md:text-2xl lg:text-4xl font-bold text-primary-950 text-pretty">
             Nuestros precios escalan con tu{" "}
-            <span className="italic text-primary-700 font-clash-regular font-light">
-              negocio
+            <span className="italic text-primary-700 font-clash-regular font-light tracking-wide leading-tight">
+              negocio{" "}
             </span>
+            y mejoran la experiencia de tus clientes, manteniendo siempre un
+            contacto directo.
           </h2>
           <p className="text-gray-500 text-sm md:text-base">
             Prueba Negoco Cloud gratis durante 30 días. Sin tarjeta de crédito.

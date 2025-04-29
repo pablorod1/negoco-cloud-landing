@@ -13,14 +13,14 @@ const features: FeatureProps[] = [
   {
     title: "Analítica comercial en tiempo real con dashboards interactivos",
     description:
-      "Supervisa KPIs como ventas, comisiones y evolución de trámites mensuales desde un dashboard visual e intuitivo. Toma decisiones estratégicas basadas en datos actualizados al instante con gráficos interactivos que impulsan el rendimiento comercial.",
+      "Supervisa KPIs como ventas, comisiones y evolución de trámites mensuales desde un dashboard visual e intuitivo. Toma decisiones estratégicas basadas en datos actualizados al instante con gráficos interactivos que impulsan el rendimiento comercial y mejoran la experiencia del cliente.",
     badge: "Control total y visión estratégica",
     images: ["/images/yearlyChart.webp", "/images/personalChart.webp"],
   },
   {
     title: "Convierte comparativas en contratos con un clic",
     description:
-      "Automatiza la gestión comercial transformando comparativas de tarifas en contratos finales de forma instantánea. Optimiza tus tasas de conversión, reduce errores operativos y acelera el cierre de ventas con tecnología inteligente.",
+      "Automatiza la gestión comercial transformando comparativas de tarifas en contratos finales de forma instantánea. Optimiza tus tasas de conversión, reduce errores operativos y acelera el cierre de ventas, mejorando la experiencia del cliente con procesos más ágiles.",
     badge: "Cierra ventas más rápido",
     images: [
       "/images/comparativa_details.webp",
@@ -46,7 +46,7 @@ const features: FeatureProps[] = [
   {
     title: "Control de usuarios y gestión de colaboradores",
     description:
-      "Invita a colaboradores externos o internos, asigna roles y controla los permisos de acceso. Protege tu información y mejora la colaboración con una plataforma segura y escalable adaptada a equipos dinámicos.",
+      "Invita a colaboradores externos o internos, asigna roles y controla los permisos de acceso. Protege tu información y mejora la colaboración con una plataforma segura y escalable adaptada a equipos dinámicos, siempre garantizando la protección de los datos de tus clientes y un contacto controlado.",
     badge: "Colaboración segura y controlada",
     images: ["/images/colaboradores.avif"],
   },

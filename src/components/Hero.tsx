@@ -33,12 +33,12 @@ export default function HeroSection() {
           <div className="space-y-6">
             <motion.h1
               id="hero-heading"
-              className="text-primary-950 text-xl font-bold sm:text-2xl md:text-3xl lg:text-5xl xl:text-7xl tracking-tight font-eras leading-tight text-shadow-md"
+              className="text-primary-950 text-xl font-bold sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl tracking-tight font-eras leading-tight text-shadow-md text-pretty"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.8, ease: "easeOut" }}
             >
-              El CRM para empresas energéticas y{" "}
+              El software CRM para empresas energéticas y{" "}
               <span className="italic text-primary-700 font-clash-regular font-light">
                 consultorías
               </span>{" "}
