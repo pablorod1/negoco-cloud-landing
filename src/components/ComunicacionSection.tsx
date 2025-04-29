@@ -12,7 +12,7 @@ export default function ComunicacionSection() {
       subtitle="Mejora la colaboración entre comerciales, gerentes y clientes con alertas inteligentes que mantienen a todos informados al instante. Gestiona tus servicios y trámites con mayor agilidad y control."
       layout="centered"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-16 max-w-7xl mx-auto items-stretch">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-16 max-w-7xl mx-auto items-stretch mt-12">
         <CommunicationCard
           index={0}
           icon={BellRing}
@@ -68,7 +68,7 @@ const CommunicationCard = ({
           <h3 className="text-base md:text-lg lg:text-xl font-semibold text-primary-700 group-hover:text-primary transition">
             {title}
           </h3>
-          <p className="text-sm lg:text-base  text-slate-600">{description}</p>
+          <p className="text-sm lg:text-base text-slate-600">{description}</p>
         </div>
       </div>
     </motion.div>

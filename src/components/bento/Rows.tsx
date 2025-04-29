@@ -63,7 +63,7 @@ const BigRow1 = () => {
             key={index}
             className="flex flex-col items-center gap-4 text-gray-700 text-xs text-center "
           >
-            <div className="bg-primary-950 rounded-xl p-4 text-gray-100 shadow-md">
+            <div className="bg-primary-950 rounded-xl p-4 text-gray-100 shadow-badge border border-primary-900">
               <item.icon className="size-8" />
             </div>
             <p className="text-gray-600">{item.title}</p>

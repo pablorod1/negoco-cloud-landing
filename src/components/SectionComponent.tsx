@@ -86,7 +86,7 @@ export default function SectionComponent({
       id={id}
       className={cn(
         layoutClasses[layout],
-        "w-full xl:max-w-[1600px] mx-auto px-12 py-24 xl:px-6 xl:py-32 pb-28 relative",
+        "w-full xl:max-w-[1600px] mx-auto px-12 py-24 xl:px-6 xl:py-44 pb-28 relative",
         !stickyHeader ? "overflow-hidden" : "",
         className
       )}
