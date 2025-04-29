@@ -29,7 +29,7 @@ export default function ContactModal({
           {buttonText}
         </Button>
       </DialogTrigger>
-      <DialogContent className="md:max-w-[650px] w-full">
+      <DialogContent className="md:max-w-[650px] w-full max-h-[85vh] overflow-y-auto">
         <DialogHeader className="mb-4">
           <DialogTitle className="text-primary-800">
             Solicita tu plan para nuestro CRM
