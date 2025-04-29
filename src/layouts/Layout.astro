@@ -5,6 +5,7 @@ import Background from "@/components/Background.astro";
 import WhatsappButton from "@/components/WhatsappButton";
 import Footer from "@/components/Footer.astro";
 import Analytics from "@vercel/analytics/astro";
+import CookiesAlert from "@/components/CookiesAlert";
 ---
 
 <!doctype html>
@@ -19,12 +20,13 @@ import Analytics from "@vercel/analytics/astro";
     <title>Negoco Cloud | El CRM para Consultorías Energéticas</title>
     <meta
       name="description"
-      content="Negoco Cloud es el CRM diseñado para consultorías energéticas que buscan optimizar su gestión comercial y maximizar sus ventas. Solución adaptable, segura y potente."
+      content="Negoco Cloud es el software CRM para empresas del sector energético. Gestiona clientes, automatiza servicios y cubre todas tus necesidades comerciales."
     />
     <meta
       name="keywords"
-      content="crm energía, crm, consultoría energética, crm para consultorías, crm para consultorías energéticas, gestión comercial energía, crm ventas energía"
+      content="crm energía, crm consultorías energéticas, software crm energía, gestión comercial energía, software consultoría, servicios energía, clientes energía, empresas sector energético, crm ventas, erp energía, necesidades comerciales, suministro energético"
     />
+
     <meta name="author" content="Negoco Cloud" />
     <meta name="robots" content="index, follow" />
 
@@ -63,6 +65,7 @@ import Analytics from "@vercel/analytics/astro";
     <Header />
     <slot />
     <WhatsappButton client:load />
+    <CookiesAlert client:load />
     <Footer />
   </body>
 </html>
