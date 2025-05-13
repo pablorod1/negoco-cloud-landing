@@ -37,6 +37,7 @@ const RadioCardsDemo = ({ defaultChecked, onValueChange }: Props) => {
       onValueChange={onValueChange}
       defaultValue={defaultChecked}
       className="w-full grid grid-cols-2 gap-4 justify-center items-center"
+      id="plan"
     >
       {options.map((option) => (
         <RadioGroup.Item

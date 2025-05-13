@@ -178,6 +178,7 @@ export default function ContactForm({
                     {...field}
                     disabled={isSubmitting}
                     className="focus:border-primary"
+                    autoComplete="given-name"
                   />
                 </FormControl>
                 <FormMessage />
@@ -197,6 +198,7 @@ export default function ContactForm({
                     {...field}
                     disabled={isSubmitting}
                     className="focus:border-primary"
+                    autoComplete="family-name"
                   />
                 </FormControl>
                 <FormMessage />
@@ -217,6 +219,7 @@ export default function ContactForm({
                   {...field}
                   disabled={isSubmitting}
                   className="focus:border-primary"
+                  autoComplete="email"
                 />
               </FormControl>
               <FormMessage />
@@ -236,6 +239,7 @@ export default function ContactForm({
                   {...field}
                   disabled={isSubmitting}
                   className="focus:border-primary"
+                  autoComplete="tel"
                 />
               </FormControl>
               <FormMessage />

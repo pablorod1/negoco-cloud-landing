@@ -124,11 +124,6 @@ export default function PricingCard({
               plan={title.toLowerCase() as Plan}
             />
           )}
-          {title === "Starter" && (
-            <p className="text-[10px] md:text-xs text-gray-500 mt-2">
-              1 mes de prueba gratis. Sin tarjeta de crédito.
-            </p>
-          )}
         </div>
       </CardContent>
     </MotionCard>
