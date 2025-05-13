@@ -27,12 +27,9 @@ export default function CookiesAlert() {
         <p>
           Utilizamos cookies para mejorar tu experiencia y analizar el tráfico.
           Al continuar navegando aceptas nuestra{" "}
-          <a
-            href="/aviso-cookies"
-            className="underline text-blue-600 dark:text-blue-400"
-          >
+          <span className="underline text-blue-600 dark:text-blue-400">
             política de cookies
-          </a>
+          </span>
           .
         </p>
       </div>
