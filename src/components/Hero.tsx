@@ -1,7 +1,8 @@
-import { Anchor, Mail } from "lucide-react";
+import { Anchor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import ContactModal from "./contact/ContactModal";
+import WhatsApp from "./icons/WhatsappIcon";
 
 export default function HeroSection() {
   return (
@@ -70,11 +71,13 @@ export default function HeroSection() {
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
               <Button asChild variant="primary" size="lg">
                 <a
-                  title="Correo electrónico Negoco Cloud"
-                  href="mailto:info@negococloud.es"
+                  title="Contacto de WhatsApp"
+                  href="https://wa.me/662268181"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <Mail />
-                  Contáctanos por correo
+                  <WhatsApp />
+                  Contáctanos por Whatsapp
                 </a>
               </Button>
             </motion.div>

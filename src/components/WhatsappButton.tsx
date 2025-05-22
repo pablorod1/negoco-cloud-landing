@@ -11,7 +11,7 @@ export default function WhatsappButton() {
     >
       <a
         title="Contacto de WhatsApp"
-        href="https://wa.me/"
+        href="https://wa.me/662268181"
         target="_blank"
         rel="noopener noreferrer"
         className="w-full p-4 inline-flex justify-start items-center bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all duration-300"
