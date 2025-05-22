@@ -45,19 +45,18 @@ const BigRow1 = () => {
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.2 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="min-h-[420px] lg:col-span-2 lg:col-start-2 flex flex-col gap-8 bg-white via-primary-500 to-primary-900 rounded-3xl  p-6 relative overflow-hidden h-full shadow-center"
+      className="min-h-[420px] md:col-span-2 md:col-start-2 flex flex-col gap-8 bg-white via-primary-500 to-primary-900 rounded-3xl  p-6 relative overflow-hidden h-full shadow-center"
     >
       <div className="flex flex-col gap-2 flex-1">
         <h3 className="text-xl font-bold text-primary-900">
           Todo tu negocio en un solo lugar
         </h3>
         <p className="text-gray-700 text-xs">
-          Centraliza todas las operaciones comerciales en una única plataforma
-          web. Controla tus procesos clave con eficiencia y visión estratégica
-          gracias a Negoco Cloud.
+          Desde la generación de leads hasta la firma digital, automatiza sin
+          fricción y escala operaciones.
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-8 w-full h-full justify-between">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-2 w-full h-full justify-center items-center">
         {items.map((item, index) => (
           <div
             key={index}
@@ -86,10 +85,13 @@ const BigRow2 = () => {
       className="min-h-[420px] flex flex-col justify-between items-center relative h-full w-full bg-white shadow-center rounded-3xl p-6 overflow-hidden"
     >
       <h3 className="text-xl font-bold text-primary-900 mb-2">
-        Descubre cómo tu consultoría puede rendir al máximo
+        Potencia el rendimiento de tu consultoría
       </h3>
+      <p className="text-gray-700 text-xs leading-relaxed text-pretty">
+        Optimiza cada tarea con tecnología específica para el sector energético.
+      </p>
 
-      <div className="w-full h-full flex justify-center items-center gap-5">
+      <div className="w-full h-full flex justify-center items-center gap-5 py-8">
         <PerformanceChart value={96} opacity="opacity-30" />
         <PerformanceChart value={97} opacity="opacity-30" />
         <PerformanceChart value={98} />

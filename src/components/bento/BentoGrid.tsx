@@ -9,7 +9,7 @@ export default function BentoGrid() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.4 }}
       viewport={{ once: true }}
-      className="grid grid-cols-1 lg:grid-cols-3 grid-rows-2 gap-x-4 gap-y-4 "
+      className="grid grid-cols-1 md:grid-cols-3 grid-rows-2 gap-x-4 gap-y-4 "
     >
       <BigCol1 />
       <BigCol2 />

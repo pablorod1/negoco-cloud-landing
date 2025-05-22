@@ -56,7 +56,7 @@ export const FeaturesSection = () => {
   return (
     <section
       aria-labelledby="features-heading"
-      className="w-full flex flex-col items-center gap-12 md:gap-16 lg:gap-24"
+      className="w-full flex flex-col items-center gap-12 md:gap-16 lg:gap-24 px-12 xl:px-6 py-12 xl:py-24 z-50 relative max-w-[1600px] mx-auto"
     >
       <h2 id="features-heading" className="sr-only">
         Funcionalidades destacadas de Negoco Cloud

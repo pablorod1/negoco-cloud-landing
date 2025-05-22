@@ -26,7 +26,8 @@ export default function HeroSection() {
             }}
           >
             <span className="animate-in text-sm tracking-wide">
-              ¡Negoco Cloud ya está aquí! 🚀
+              ¡Negoco Cloud ya está aquí! 🚀 El CRM para energía que entiende tu
+              negocio.
             </span>
           </motion.div>
 
@@ -52,10 +53,9 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 2, ease: "easeOut" }}
             >
-              Digitaliza la gestión de clientes, automatiza procesos y mejora la
-              productividad con un CRM diseñado para el sector de la energía.
-              Negoco Cloud potencia tu operativa diaria y reduce costes desde el
-              primer día.
+              Negoco Cloud es el CRM diseñado para consultorías energéticas.
+              Gestiona leads, automatiza tareas críticas y controla tus ventas
+              desde un único panel. Enfócate en cerrar, no en perseguir excels.
             </motion.p>
           </div>
         </header>

@@ -3,20 +3,24 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "@/components/Hero";
 import "../styles/global.css";
 import ScrollBlocker from "@/components/ScrollBlocker";
-import AnimatedSection from "@/components/AnimatedSection";
+import BentoSection from "@/components/BentoSection";
 import PricingSection from "@/components/pricing/PricingSection";
 import Services from "@/components/Services";
 import SecuritySection from "@/components/SecuritySection";
 import ComunicacionSection from "@/components/ComunicacionSection";
 import CRMvsERPSection from "@/components/CRMvsERPSection";
 import BannerCTA from "@/components/BannerCTA";
+import BenefitsSection from "@/components/features/BenefitsSection";
+import { FeaturesSection } from "@/components/features/FeatureSection";
 ---
 
 <Layout>
   <main class="space-y-44">
     <ScrollBlocker client:load />
     <Hero client:visible />
-    <AnimatedSection client:visible />
+    <BentoSection client:visible />
+    <BenefitsSection client:visible />
+    <FeaturesSection client:visible />
     <BannerCTA client:visible />
     <Services client:visible />
     <SecuritySection client:visible />
